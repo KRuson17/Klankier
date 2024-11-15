@@ -23,3 +23,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	#upadek
+	if position.y > 720:
+		dead()
+
+func dead():
+	get_tree().reload_current_scene()

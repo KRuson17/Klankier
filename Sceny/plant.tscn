@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwaltwgb3ng3w"]
+
+[ext_resource type="Script" path="res://script/plant.gd" id="1_d5h6i"]
+[ext_resource type="Texture2D" uid="uid://bqb0dm58yqdk2" path="res://asset/plant.png" id="1_jn8yn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vw7o3"]
+size = Vector2(68, 107.5)
+
+[node name="plant" type="Area2D"]
+script = ExtResource("1_d5h6i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jn8yn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["enemy"]]
+position = Vector2(0, 0.25)
+shape = SubResource("RectangleShape2D_vw7o3")

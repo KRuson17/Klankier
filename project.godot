@@ -15,6 +15,16 @@ run/main_scene="res://Sceny/world.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://asset/icon.svg"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
+[global_group]
+
+enemy=""
+player=""
+
 [input]
 
 ui_left={
