@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnarmhd0wf65y"]
+
+[ext_resource type="Script" path="res://script/thorn.gd" id="1_inani"]
+[ext_resource type="Texture2D" uid="uid://cthv4f2et5l0s" path="res://asset/thorn.png" id="1_nxkxa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qaejq"]
+size = Vector2(78, 82)
+
+[node name="thorn" type="Area2D" groups=["enemy"]]
+script = ExtResource("1_inani")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nxkxa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qaejq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
