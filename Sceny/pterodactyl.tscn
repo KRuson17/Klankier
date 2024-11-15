@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://b1a251mvblg7r"]
 
 [ext_resource type="Script" path="res://script/pterodactyl.gd" id="1_b8kk8"]
-[ext_resource type="Texture2D" uid="uid://6m0f30lu5xm6" path="res://asset/ptero.png" id="1_xtdnb"]
+[ext_resource type="Texture2D" uid="uid://6m0f30lu5xm6" path="res://asset/Enemy/ptero.png" id="1_xtdnb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rk58u"]
 atlas = ExtResource("1_xtdnb")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://co4jhqvddaay7"
-path="res://.godot/imported/bucket.png-4eb30f36b22d046a0413b9050afb8c1f.ctex"
+uid="uid://6m0f30lu5xm6"
+path="res://.godot/imported/ptero.png-7ab49cf2ca15e425d3e1352f91b3253a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/bucket.png"
-dest_files=["res://.godot/imported/bucket.png-4eb30f36b22d046a0413b9050afb8c1f.ctex"]
+source_file="res://asset/Enemy/ptero.png"
+dest_files=["res://.godot/imported/ptero.png-7ab49cf2ca15e425d3e1352f91b3253a.ctex"]
 
 [params]
 

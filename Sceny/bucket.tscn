@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dh0vg37j543o0"]
+[gd_scene load_steps=4 format=3 uid="uid://dh0vg37j543o0"]
 
-[ext_resource type="Texture2D" uid="uid://co4jhqvddaay7" path="res://asset/bucket.png" id="1_1ngq1"]
+[ext_resource type="Texture2D" uid="uid://co4jhqvddaay7" path="res://asset/items/bucket.png" id="1_1ngq1"]
+[ext_resource type="Script" path="res://Sceny/bucket.gd" id="1_rv8qv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpflw"]
 size = Vector2(82, 103)
 
-[node name="bucket" type="Area2D"]
+[node name="bucket" type="Area2D" groups=["bucket"]]
+script = ExtResource("1_rv8qv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_1ngq1")
@@ -13,3 +15,5 @@ texture = ExtResource("1_1ngq1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_rpflw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

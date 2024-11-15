@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cthv4f2et5l0s"
-path="res://.godot/imported/thorn.png-102b8b5e57782f9436609554405797b4.ctex"
+path="res://.godot/imported/thorn.png-770a645ec10b6cd087e2f7239db606cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/thorn.png"
-dest_files=["res://.godot/imported/thorn.png-102b8b5e57782f9436609554405797b4.ctex"]
+source_file="res://asset/Enemy/thorn.png"
+dest_files=["res://.godot/imported/thorn.png-770a645ec10b6cd087e2f7239db606cd.ctex"]
 
 [params]
 

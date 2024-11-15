@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dwaltwgb3ng3w"]
 
 [ext_resource type="Script" path="res://script/plant.gd" id="1_d5h6i"]
-[ext_resource type="Texture2D" uid="uid://bqb0dm58yqdk2" path="res://asset/plant.png" id="1_jn8yn"]
+[ext_resource type="Texture2D" uid="uid://bqb0dm58yqdk2" path="res://asset/Enemy/plant.png" id="1_jn8yn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vw7o3"]
 size = Vector2(68, 107.5)
