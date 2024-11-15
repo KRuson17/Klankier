@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cthv4f2et5l0s" path="res://asset/thorn.png" id="1_nxkxa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qaejq"]
-size = Vector2(78, 82)
+size = Vector2(70, 54)
 
 [node name="thorn" type="Area2D" groups=["enemy"]]
 script = ExtResource("1_inani")

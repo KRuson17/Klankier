@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwq7nm2rjxbj6"]
+[gd_scene load_steps=7 format=3 uid="uid://bwq7nm2rjxbj6"]
 
 [ext_resource type="PackedScene" uid="uid://d2qg1eehnkr6" path="res://Sceny/player.tscn" id="1_8axij"]
 [ext_resource type="PackedScene" uid="uid://bp6ibj62aa5lx" path="res://Sceny/ground.tscn" id="2_rse7j"]
 [ext_resource type="PackedScene" uid="uid://b1a251mvblg7r" path="res://Sceny/pterodactyl.tscn" id="3_gfom1"]
 [ext_resource type="PackedScene" uid="uid://cnarmhd0wf65y" path="res://Sceny/thorn.tscn" id="4_1rmqi"]
+[ext_resource type="PackedScene" uid="uid://dwaltwgb3ng3w" path="res://Sceny/plant.tscn" id="5_cgpp1"]
+[ext_resource type="PackedScene" uid="uid://cwhstejcvybkw" path="res://Sceny/wall.tscn" id="6_0xv8o"]
 
 [node name="World" type="Node2D"]
 
@@ -23,4 +25,10 @@ position = Vector2(1003, 297)
 position = Vector2(658, 67)
 
 [node name="thorn" parent="." instance=ExtResource("4_1rmqi")]
-position = Vector2(1074, 214)
+position = Vector2(708, 298)
+
+[node name="plant" parent="." instance=ExtResource("5_cgpp1")]
+position = Vector2(1125, 196)
+
+[node name="wall" parent="." instance=ExtResource("6_0xv8o")]
+position = Vector2(1128, 134)
