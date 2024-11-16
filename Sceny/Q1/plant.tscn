@@ -6,12 +6,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vw7o3"]
 size = Vector2(68, 107.5)
 
-[node name="plant" type="Area2D"]
+[node name="plant" type="Area2D" groups=["enemy"]]
 script = ExtResource("1_d5h6i")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_jn8yn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["enemy"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.25)
 shape = SubResource("RectangleShape2D_vw7o3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

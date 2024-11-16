@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2s2ubnl46htu"]
+
+[ext_resource type="Texture2D" uid="uid://do2tdccpq2yt6" path="res://asset/environment/chat.png" id="1_bgss4"]
+
+[node name="chat" type="Node2D"]
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(11.25, -2.5)
+scale = Vector2(1.23961, 1)
+texture = ExtResource("1_bgss4")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -235.5
+offset_top = -22.5
+offset_right = 260.5
+offset_bottom = 16.5
+text = "Znalazłem tę stronę. Mogę spróbować naprawić czasozmieniacz."
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://bwq7nm2rjxbj6"]
+
+[ext_resource type="Script" path="res://script/world_2.gd" id="1_6nkly"]
+[ext_resource type="PackedScene" uid="uid://bp6ibj62aa5lx" path="res://Sceny/Q1/ground.tscn" id="1_g26a0"]
+[ext_resource type="PackedScene" uid="uid://b1a251mvblg7r" path="res://Sceny/Q1/pterodactyl.tscn" id="2_qof0f"]
+[ext_resource type="PackedScene" uid="uid://cnarmhd0wf65y" path="res://Sceny/Q1/thorn.tscn" id="3_15x6r"]
+[ext_resource type="PackedScene" uid="uid://dh0vg37j543o0" path="res://Sceny/Q1/bucket.tscn" id="4_3b42n"]
+[ext_resource type="PackedScene" uid="uid://d2qg1eehnkr6" path="res://Sceny/Q1/player.tscn" id="5_ciuom"]
+[ext_resource type="PackedScene" uid="uid://dwaltwgb3ng3w" path="res://Sceny/Q1/plant.tscn" id="6_okj8m"]
+[ext_resource type="PackedScene" uid="uid://bpogp172tvtp1" path="res://Sceny/Q1/book.tscn" id="7_odjdu"]
+
+[node name="World1" type="Node2D"]
+script = ExtResource("1_6nkly")
+
+[node name="ground" type="Node2D" parent="."]
+
+[node name="ground" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(308, 386)
+
+[node name="ground2" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(773, 357)
+
+[node name="ground3" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(1003, 297)
+
+[node name="ground4" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(1392, 441)
+
+[node name="ground5" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(1810, 480)
+
+[node name="ground6" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(2120, 432)
+
+[node name="ground7" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(2557, 481)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("2_qof0f")]
+position = Vector2(658, 67)
+
+[node name="thorn" parent="." instance=ExtResource("3_15x6r")]
+position = Vector2(708, 298)
+
+[node name="bucket" parent="." instance=ExtResource("4_3b42n")]
+position = Vector2(598, 341)
+
+[node name="player" parent="." instance=ExtResource("5_ciuom")]
+position = Vector2(224, 249)
+scale = Vector2(0.3, 0.3)
+
+[node name="plant" parent="." instance=ExtResource("6_okj8m")]
+position = Vector2(2256, 312)
+
+[node name="book" parent="." instance=ExtResource("7_odjdu")]
+position = Vector2(2608, 368)

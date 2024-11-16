@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Klankier"
-run/main_scene="res://Sceny/world.tscn"
+run/main_scene="res://Sceny/Q1/world1.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://asset/icon.svg"
 

@@ -6,7 +6,7 @@ var step = 1
 func _ready() -> void:
 	$AnimatedSprite2D.play("default")
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if abs(rangeToMove[0]) >= abs(rangeToMove[1]):
 		direc = !direc
 	step = 1 if direc else -1

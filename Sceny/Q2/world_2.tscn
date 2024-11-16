@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=3 uid="uid://jgku3vpkf4fo"]
+
+[ext_resource type="Script" path="res://script/world_2.gd" id="1_wqx20"]
+[ext_resource type="PackedScene" uid="uid://d2qg1eehnkr6" path="res://Sceny/Q1/player.tscn" id="2_dhnmb"]
+[ext_resource type="PackedScene" uid="uid://c2s2ubnl46htu" path="res://Sceny/Q1/chat.tscn" id="3_rh030"]
+[ext_resource type="PackedScene" uid="uid://bndywemxnb5yy" path="res://Sceny/Q2/dino.tscn" id="4_y5wks"]
+[ext_resource type="PackedScene" uid="uid://bp6ibj62aa5lx" path="res://Sceny/Q1/ground.tscn" id="5_kyhqs"]
+[ext_resource type="Texture2D" uid="uid://dqfh1r8j78koy" path="res://asset/environment/cave.png" id="5_tv2fx"]
+[ext_resource type="PackedScene" uid="uid://oovj3wg3poci" path="res://Sceny/Q2/bone.tscn" id="6_p5ctt"]
+
+[node name="world2" type="Node2D"]
+script = ExtResource("1_wqx20")
+
+[node name="Cave" type="Sprite2D" parent="."]
+position = Vector2(4782, 352)
+texture = ExtResource("5_tv2fx")
+
+[node name="player" parent="." instance=ExtResource("2_dhnmb")]
+position = Vector2(584, 238)
+scale = Vector2(0.3, 0.3)
+
+[node name="chatDino" parent="." instance=ExtResource("3_rh030")]
+visible = false
+position = Vector2(238, 51)
+scale = Vector2(1, 1)
+
+[node name="Label" parent="chatDino" index="1"]
+text = "RRRRRAAAAAAAAWWWW"
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(584, 238)
+
+[node name="dino" parent="Camera2D" instance=ExtResource("4_y5wks")]
+visible = false
+position = Vector2(-560, -24)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="ground" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(577, 363)
+
+[node name="ground2" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(1477, 446)
+
+[node name="ground3" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(1047, 294)
+
+[node name="ground4" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(1891, 287)
+
+[node name="ground5" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(2284, 329)
+
+[node name="ground6" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(2217, 588)
+
+[node name="ground7" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(2852, 350)
+
+[node name="ground8" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(1894, 592)
+
+[node name="ground9" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(2526, 597)
+
+[node name="ground10" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(2836, 595)
+
+[node name="bone" parent="Node2D" instance=ExtResource("6_p5ctt")]
+position = Vector2(1816, 458)
+
+[node name="bone2" parent="Node2D" instance=ExtResource("6_p5ctt")]
+position = Vector2(2569, 400)
+
+[node name="ground11" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(3158, 595)
+
+[node name="ground12" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(3493, 602)
+
+[node name="ground13" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(3842, 616)
+
+[node name="ground14" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(4198, 588)
+
+[node name="ground15" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(4576, 588)
+
+[node name="ground16" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(4925, 588)
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.01
+autostart = true
+
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_timeout"]
+
+[editable path="chatDino"]
