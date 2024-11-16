@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqnj7482nhsa8"
-path="res://.godot/imported/platforma do poruszania.png-7ee3f383a35a129c434baaa4c15bd2cd.ctex"
+uid="uid://c1gjr1m53rwbn"
+path="res://.godot/imported/drzewo 1.png-4081ce6ea5a8a4152b7cfb427f9895cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/arena/bloki/platforma do poruszania.png"
-dest_files=["res://.godot/imported/platforma do poruszania.png-7ee3f383a35a129c434baaa4c15bd2cd.ctex"]
+source_file="res://asset/bloki/drzewo 1.png"
+dest_files=["res://.godot/imported/drzewo 1.png-4081ce6ea5a8a4152b7cfb427f9895cc.ctex"]
 
 [params]
 

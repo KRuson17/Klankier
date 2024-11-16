@@ -73,11 +73,11 @@ func win2():
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	if area.name == "ladder":
+	if area.is_in_group("ladder"):
 		on_ladder = true
 		velocity = Vector2.ZERO
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
-	if area.name == "ladder":
+	if area.is_in_group("ladder"):
 		on_ladder = false

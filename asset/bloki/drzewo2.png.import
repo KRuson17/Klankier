@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1gjr1m53rwbn"
-path="res://.godot/imported/drzewo 1.png-251a9b594635644d6b8b945db83417a4.ctex"
+uid="uid://hrk2q44v8d4y"
+path="res://.godot/imported/drzewo2.png-3dcfb3f0203f3b5c255fcd70efb53fc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/arena/bloki/drzewo 1.png"
-dest_files=["res://.godot/imported/drzewo 1.png-251a9b594635644d6b8b945db83417a4.ctex"]
+source_file="res://asset/bloki/drzewo2.png"
+dest_files=["res://.godot/imported/drzewo2.png-3dcfb3f0203f3b5c255fcd70efb53fc9.ctex"]
 
 [params]
 

@@ -14,6 +14,11 @@ position = Vector2(1954, 77)
 scale = Vector2(1.9475, 1)
 texture = ExtResource("1_4mntm")
 
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(5845, 76)
+scale = Vector2(1.9475, 1)
+texture = ExtResource("1_4mntm")
+
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(0.5, 0.5)
 
@@ -22,9 +27,19 @@ position = Vector2(1937, 524.25)
 scale = Vector2(1.37167, 3.12662)
 texture = ExtResource("2_axrvp")
 
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(5849, 520)
+scale = Vector2(1.37167, 3.12662)
+texture = ExtResource("2_axrvp")
+
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
 position = Vector2(1950.5, 921.5)
+scale = Vector2(12.2406, 3.01869)
+texture = ExtResource("3_bcwyp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(5865, 920)
 scale = Vector2(12.2406, 3.01869)
 texture = ExtResource("3_bcwyp")

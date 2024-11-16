@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hrk2q44v8d4y"
-path="res://.godot/imported/drzewo2.png-ca2007698811f4a29f8bf6801c03dc07.ctex"
+uid="uid://daj5ly7ptjgde"
+path="res://.godot/imported/drabina.png-501e742df3aa03232a49029838fec87a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/arena/bloki/drzewo2.png"
-dest_files=["res://.godot/imported/drzewo2.png-ca2007698811f4a29f8bf6801c03dc07.ctex"]
+source_file="res://asset/bloki/drabina.png"
+dest_files=["res://.godot/imported/drabina.png-501e742df3aa03232a49029838fec87a.ctex"]
 
 [params]
 

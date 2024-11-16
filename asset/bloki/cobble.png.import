@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cw0xi13fd42i1"
-path="res://.godot/imported/cobble.png-1dc7c6a7e7205f9223c6ff2e86eb3ae8.ctex"
+path="res://.godot/imported/cobble.png-271617742595b5a8e63224dbe78f1acc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/arena/bloki/cobble.png"
-dest_files=["res://.godot/imported/cobble.png-1dc7c6a7e7205f9223c6ff2e86eb3ae8.ctex"]
+source_file="res://asset/bloki/cobble.png"
+dest_files=["res://.godot/imported/cobble.png-271617742595b5a8e63224dbe78f1acc.ctex"]
 
 [params]
 

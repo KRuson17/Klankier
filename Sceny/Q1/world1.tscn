@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://bwq7nm2rjxbj6"]
+[gd_scene load_steps=13 format=3 uid="uid://bwq7nm2rjxbj6"]
 
 [ext_resource type="Script" path="res://script/world_2.gd" id="1_6nkly"]
 [ext_resource type="PackedScene" uid="uid://bp6ibj62aa5lx" path="res://Sceny/Q1/ground.tscn" id="1_g26a0"]
 [ext_resource type="PackedScene" uid="uid://b1a251mvblg7r" path="res://Sceny/Q1/pterodactyl.tscn" id="2_qof0f"]
 [ext_resource type="PackedScene" uid="uid://cnarmhd0wf65y" path="res://Sceny/Q1/thorn.tscn" id="3_15x6r"]
+[ext_resource type="PackedScene" uid="uid://t7ndhgjyvpte" path="res://Sceny/Q1/brige.tscn" id="3_boobj"]
 [ext_resource type="PackedScene" uid="uid://dh0vg37j543o0" path="res://Sceny/Q1/bucket.tscn" id="4_3b42n"]
+[ext_resource type="PackedScene" uid="uid://cwhstejcvybkw" path="res://Sceny/Q1/wall.tscn" id="4_mg11g"]
 [ext_resource type="PackedScene" uid="uid://d2qg1eehnkr6" path="res://Sceny/Q1/player.tscn" id="5_ciuom"]
 [ext_resource type="PackedScene" uid="uid://dwaltwgb3ng3w" path="res://Sceny/Q1/plant.tscn" id="6_okj8m"]
 [ext_resource type="PackedScene" uid="uid://bpogp172tvtp1" path="res://Sceny/Q1/book.tscn" id="7_odjdu"]
@@ -20,44 +22,76 @@ script = ExtResource("1_6nkly")
 position = Vector2(308, 386)
 
 [node name="ground2" parent="ground" instance=ExtResource("1_g26a0")]
-position = Vector2(773, 357)
+position = Vector2(696, 428)
 
 [node name="ground3" parent="ground" instance=ExtResource("1_g26a0")]
-position = Vector2(1003, 297)
+position = Vector2(1123, 318)
 
 [node name="ground4" parent="ground" instance=ExtResource("1_g26a0")]
-position = Vector2(1392, 441)
+position = Vector2(984, 691)
 
 [node name="ground5" parent="ground" instance=ExtResource("1_g26a0")]
-position = Vector2(1810, 480)
+position = Vector2(1362, 668)
 
 [node name="ground6" parent="ground" instance=ExtResource("1_g26a0")]
-position = Vector2(2120, 432)
+position = Vector2(181, 690)
 
 [node name="ground7" parent="ground" instance=ExtResource("1_g26a0")]
-position = Vector2(2557, 481)
+position = Vector2(7524, 543)
+
+[node name="brige" parent="ground" instance=ExtResource("3_boobj")]
+position = Vector2(608, 617)
+scale = Vector2(3, 1)
+
+[node name="wall" parent="ground" instance=ExtResource("4_mg11g")]
+position = Vector2(122, 234)
+
+[node name="thorn" parent="ground" instance=ExtResource("3_15x6r")]
+position = Vector2(692, 356)
+
+[node name="wall2" parent="ground" instance=ExtResource("4_mg11g")]
+position = Vector2(7696, 241)
+
+[node name="ground8" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(1745, 14)
+
+[node name="ground9" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(2244, 107)
+
+[node name="ground10" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(2680, 180)
+
+[node name="ground11" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(3131, 250)
+
+[node name="ground12" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(3599, 167)
+
+[node name="ground13" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(4023, 238)
+
+[node name="ladder" parent="ground" instance=ExtResource("9_ru5l7")]
+position = Vector2(910, 391)
+scale = Vector2(5.48, 5.48)
+
+[node name="ladder2" parent="ground" instance=ExtResource("9_ru5l7")]
+position = Vector2(1539, 286)
+scale = Vector2(5, 20)
 
 [node name="RigidBody2D" parent="." instance=ExtResource("2_qof0f")]
-position = Vector2(443, 47)
-
-[node name="thorn" parent="." instance=ExtResource("3_15x6r")]
-position = Vector2(703, 273)
+position = Vector2(1242, 25)
 
 [node name="bucket" parent="." instance=ExtResource("4_3b42n")]
-position = Vector2(1003, 214)
+position = Vector2(212, 593)
 
 [node name="player" parent="." instance=ExtResource("5_ciuom")]
-position = Vector2(1785, 304)
+position = Vector2(222, 242)
 scale = Vector2(0.3, 0.3)
 
 [node name="plant" parent="." instance=ExtResource("6_okj8m")]
-position = Vector2(2225, 271)
+position = Vector2(7471, 381)
 
 [node name="book" parent="." instance=ExtResource("7_odjdu")]
-position = Vector2(2608, 368)
-
-[node name="ladder" parent="." instance=ExtResource("9_ru5l7")]
-position = Vector2(1338, 281)
-scale = Vector2(5.48, 5.48)
+position = Vector2(7629, 436)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("10_g340g")]

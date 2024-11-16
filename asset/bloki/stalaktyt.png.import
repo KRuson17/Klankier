@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jucsvmlcf4mn"
-path="res://.godot/imported/mc.png-06041c9339490b87bd80a1047a780061.ctex"
+uid="uid://0e3o5n1conp4"
+path="res://.godot/imported/stalaktyt.png-9670aae539426077fb9b89efa5bf660e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/arena/bloki/mc.png"
-dest_files=["res://.godot/imported/mc.png-06041c9339490b87bd80a1047a780061.ctex"]
+source_file="res://asset/bloki/stalaktyt.png"
+dest_files=["res://.godot/imported/stalaktyt.png-9670aae539426077fb9b89efa5bf660e.ctex"]
 
 [params]
 

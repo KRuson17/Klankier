@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0e3o5n1conp4"
-path="res://.godot/imported/stalaktyt.png-8653c580f3400c9f6ab6590f3106d5d5.ctex"
+uid="uid://cqnj7482nhsa8"
+path="res://.godot/imported/platforma do poruszania.png-7405c47003705fe42c0c921f234df7e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/arena/bloki/stalaktyt.png"
-dest_files=["res://.godot/imported/stalaktyt.png-8653c580f3400c9f6ab6590f3106d5d5.ctex"]
+source_file="res://asset/bloki/platforma do poruszania.png"
+dest_files=["res://.godot/imported/platforma do poruszania.png-7405c47003705fe42c0c921f234df7e4.ctex"]
 
 [params]
 

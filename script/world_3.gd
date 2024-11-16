@@ -103,7 +103,6 @@ func die():
 func _on_timer_timeout() -> void:
 	match point:
 		0:
-			print(bones)
 			$player/portal.visible = false
 			$king.play("idle")
 			$king/chat.visible = false
@@ -207,7 +206,6 @@ func _on_winbutton_pressed() -> void:
 	point = 12
 
 func win3():
-	print("WIN.LEVEL3")
 	for child in get_children():
 		child.queue_free()
 	var l = Label.new()
