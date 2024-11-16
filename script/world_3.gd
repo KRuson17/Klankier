@@ -112,7 +112,7 @@ func _on_timer_timeout() -> void:
 		1:
 			$king.play("talk")
 			$king/chat.visible = true
-			$king/chat/Label.text = "Mamy pierwszego śmiałka, który zawalczy o tę magiczną książkę Dajcie mu broń i zaczynamy"
+			$king/chat/Label.text = "Mamy pierwszego śmiałka, który zawalczy o tę magiczną książkę"
 			$player/chat.visible = false
 			point = 2
 			$Timer.start()
@@ -154,6 +154,7 @@ func _on_timer_timeout() -> void:
 			$king.play("idle")
 			$king/chat.visible = false
 			$player.showButton(true)
+			$enemyOnSand.scale = Vector2(0.5, 0.5)
 			startFight(2)
 		8:
 			$Timer.wait_time = 3
