@@ -13,6 +13,7 @@
 script = ExtResource("1_wqx20")
 
 [node name="Cave" type="Sprite2D" parent="."]
+z_index = -2
 position = Vector2(4782, 352)
 texture = ExtResource("5_tv2fx")
 

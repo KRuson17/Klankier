@@ -104,6 +104,7 @@ func die():
 func _on_timer_timeout() -> void:
 	match point:
 		0:
+			$player/portal.visible = false
 			$king.play("idle")
 			$king/chat.visible = false
 			$player/chat.visible = true
@@ -179,6 +180,8 @@ func _on_timer_timeout() -> void:
 			$king.play("idle")
 			$king/chat.visible = false
 			$winbutton.visible = true
+		12:
+			win3()
 		66:
 			$player.play("idle")
 			point = null
@@ -198,7 +201,10 @@ func _on_timer_timeout() -> void:
 
 
 func _on_winbutton_pressed() -> void:
-	win3()
+	$player/portal.visible = true
+	$winbutton.visible = false
+	$Timer.start()
+	point = 12
 
 func win3():
 	print("WIN.LEVEL3")

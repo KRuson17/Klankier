@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cpr651naip60l"]
+[gd_scene load_steps=10 format=3 uid="uid://cpr651naip60l"]
 
 [ext_resource type="Script" path="res://script/world_3.gd" id="1_djioa"]
 [ext_resource type="PackedScene" uid="uid://de81tcqsny87o" path="res://Sceny/Q3/background.tscn" id="1_y4hsy"]
 [ext_resource type="PackedScene" uid="uid://c3jhvoe10qoy6" path="res://Sceny/Q3/king.tscn" id="2_j68e7"]
 [ext_resource type="PackedScene" uid="uid://dh0p03hyova8s" path="res://Sceny/Q3/player.tscn" id="3_0f8hp"]
 [ext_resource type="PackedScene" uid="uid://6f2c2uckcvm" path="res://Sceny/Q3/enemy_on_sand.tscn" id="5_okop6"]
+[ext_resource type="PackedScene" uid="uid://u57tdje3v8fa" path="res://Sceny/Q2/portal.tscn" id="5_onrqv"]
 [ext_resource type="PackedScene" uid="uid://biy0hhe7k4fwq" path="res://Sceny/Q3/bar.tscn" id="6_lo8wb"]
 [ext_resource type="Texture2D" uid="uid://chpwfcv58p0ea" path="res://asset/items/book.png" id="7_iysom"]
 [ext_resource type="Texture2D" uid="uid://bj00lfy0333lk" path="res://asset/items/book_hover.png" id="8_1sn6s"]
@@ -13,12 +14,17 @@
 script = ExtResource("1_djioa")
 
 [node name="background" parent="." instance=ExtResource("1_y4hsy")]
+z_index = -2
 
 [node name="king" parent="." instance=ExtResource("2_j68e7")]
 position = Vector2(587, 94)
 
 [node name="player" parent="." instance=ExtResource("3_0f8hp")]
 position = Vector2(395, 588)
+
+[node name="portal" parent="player" instance=ExtResource("5_onrqv")]
+z_index = -1
+scale = Vector2(3, 3)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0

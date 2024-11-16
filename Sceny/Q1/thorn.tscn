@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cthv4f2et5l0s" path="res://asset/Enemy/thorn.png" id="1_nxkxa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qaejq"]
-size = Vector2(64, 39)
+size = Vector2(64, 38.5)
 
 [node name="thorn" type="Area2D" groups=["enemy"]]
 script = ExtResource("1_inani")
@@ -14,6 +14,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("1_nxkxa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.25)
 shape = SubResource("RectangleShape2D_qaejq")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

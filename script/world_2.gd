@@ -81,6 +81,11 @@ func _on_timer_timeout() -> void:
 			pointerToChat.get_node("Label").text = "Teraz mogę użyć czasozmieniacza"
 			pointerToChat.visible = true
 			$Timer2.wait_time = 3
+			var portal = preload("res://Sceny/Q2/portal.tscn")
+			portal = portal.instantiate()
+			portal.position = pointerToPlayer.position
+			portal.z_index = pointerToPlayer.z_index - 1
+			add_child(portal)
 			$Timer2.start()
 			point = 6
 		6:
