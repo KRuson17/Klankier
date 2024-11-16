@@ -90,4 +90,9 @@ func _on_timer_timeout() -> void:
 			point = 6
 		6:
 			$Timer2.stop()
-			print("ładuj poziom 3") #plus przekazanie bone
+			print("ładuj poziom 3")
+			var world_3_scene = preload("res://Sceny/Q3/world_3.tscn").instantiate()
+			world_3_scene.bones = $player.bone_counter
+			get_tree().root.add_child(world_3_scene)
+			queue_free()
+			get_tree().current_scene = world_3_scene

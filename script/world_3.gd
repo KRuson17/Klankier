@@ -4,13 +4,12 @@ var point = 0
 var tura = 1
 var enemy
 var bar = []
-var bones = 0
+var bones: int = 0
 
 func _ready() -> void:
 	$king.play("talk")
 	$Timer.start()
 	bar = [$shitBar, $shitBar2]
-	bones = 1
 	if bones > 0:
 		$player.hasBone = true
 
@@ -104,6 +103,7 @@ func die():
 func _on_timer_timeout() -> void:
 	match point:
 		0:
+			print(bones)
 			$player/portal.visible = false
 			$king.play("idle")
 			$king/chat.visible = false
