@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6xq8rnubv4ti"
-path="res://.godot/imported/roslina.png-72dbf4ba6366fafeb17ca7169e0b44f2.ctex"
+uid="uid://c2cfrkxhf6t6h"
+path="res://.godot/imported/ludzik-profile-2.png-25b0351d44735cc1d837d7786a22d397.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/robocze/roslina/roslina.png"
-dest_files=["res://.godot/imported/roslina.png-72dbf4ba6366fafeb17ca7169e0b44f2.ctex"]
+source_file="res://asset/Ludzik/ludzik-profile-2.png"
+dest_files=["res://.godot/imported/ludzik-profile-2.png-25b0351d44735cc1d837d7786a22d397.ctex"]
 
 [params]
 

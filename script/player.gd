@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+var on_ladder: bool = false
 var hasBucket = false
 var canMove = true
 var point = 0
@@ -16,24 +17,44 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if canMove:
-		# Add the gravity.
-		if not is_on_floor():
-			velocity += get_gravity() * delta
+		if on_ladder:
+			# Wyłącz grawitację
+			velocity.y = 0
 
-		# Handle jump.
-		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-			velocity.y = JUMP_VELOCITY
-
-		# Get the input direction and handle the movement/deceleration.
-		# As good practice, you should replace UI actions with custom gameplay actions.
-		var direction := Input.get_axis("ui_left", "ui_right")
-		if direction:
-			velocity.x = direction * SPEED
+			# Ruch góra/dół na drabinie
+			var vertical_direction = Input.get_axis("ui_up", "ui_down")
+			velocity.y = vertical_direction * SPEED
+			
+			var horizontal_direction = Input.get_axis("ui_left", "ui_right")
+			velocity.x = horizontal_direction * SPEED
+			
+			# Animacja wspinania się
+			if vertical_direction != 0:
+				pass#$AnimatedSprite2D.play("climb")
+			else:
+				$AnimatedSprite2D.play("idle")
 		else:
-			velocity.x = move_toward(velocity.x, 0, SPEED)
-		
+			# Grawitacja działa, jeśli nie jesteśmy na drabinie
+			if not is_on_floor():
+				velocity += get_gravity() * delta
+
+			# Ruch poziomy i animacje
+			var direction = Input.get_axis("ui_left", "ui_right")
+			if direction:
+				velocity.x = direction * SPEED
+				$AnimatedSprite2D.play("run")
+				$AnimatedSprite2D.flip_h = direction < 0
+			else:
+				velocity.x = move_toward(velocity.x, 0, SPEED)
+				$AnimatedSprite2D.play("idle")
+
+			# Skok (tylko poza drabiną)
+			if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+				velocity.y = JUMP_VELOCITY
+
 		move_and_slide()
-		#upadek
+
+		# Upadek
 		if position.y > 720:
 			dead()
 
@@ -49,3 +70,14 @@ func deferred_change_scene():
 func win2():
 	print("WIN.LEVEL2")
 	canMove = false
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.name == "ladder":
+		on_ladder = true
+		velocity = Vector2.ZERO
+
+
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	if area.name == "ladder":
+		on_ladder = false

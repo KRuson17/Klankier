@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://d2qg1eehnkr6"]
+[gd_scene load_steps=8 format=3 uid="uid://d2qg1eehnkr6"]
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_8wvd2"]
 [ext_resource type="Texture2D" uid="uid://b2vmjo1nbrupw" path="res://asset/Ludzik/ludzik.baza.png" id="2_t80cl"]
 [ext_resource type="Texture2D" uid="uid://bnjmjukt177bg" path="res://asset/Ludzik/ludzik.eyes closed.png" id="3_itvo4"]
+[ext_resource type="Texture2D" uid="uid://ycrj8qn7c3gr" path="res://asset/Ludzik/ludzik-profile-right.png" id="4_qp624"]
+[ext_resource type="Texture2D" uid="uid://c2cfrkxhf6t6h" path="res://asset/Ludzik/ludzik-profile-2.png" id="5_jmim3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_crwvc"]
 animations = [{
@@ -16,6 +18,17 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_jmim3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qp624")
+}],
+"loop": true,
+"name": &"run",
+"speed": 2.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h4h5p"]
@@ -26,10 +39,19 @@ script = ExtResource("1_8wvd2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_crwvc")
-animation = &"idle"
+animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-12.5, 10)
 shape = SubResource("RectangleShape2D_h4h5p")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-12.5, 10)
+shape = SubResource("RectangleShape2D_h4h5p")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

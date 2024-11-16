@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://co4jhqvddaay7" path="res://asset/items/bucket.png" id="2_nc3oe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpflw"]
-size = Vector2(82, 103)
+size = Vector2(42, 42)
 
 [node name="bucket" type="Area2D" groups=["bucket"]]
 script = ExtResource("1_o8qc6")
@@ -13,7 +13,7 @@ script = ExtResource("1_o8qc6")
 texture = ExtResource("2_nc3oe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
+position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_rpflw")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
