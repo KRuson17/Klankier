@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://u57tdje3v8fa"]
+
+[ext_resource type="Texture2D" uid="uid://tvjmrcqp67vv" path="res://asset/environment/portal1.png" id="1_rq05c"]
+[ext_resource type="Script" path="res://script/portal.gd" id="2_1jjhw"]
+
+[node name="portal" type="Sprite2D"]
+texture = ExtResource("1_rq05c")
+script = ExtResource("2_1jjhw")

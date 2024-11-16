@@ -7,6 +7,7 @@ var bar = []
 var bones = 0
 
 func _ready() -> void:
+	$king.play("talk")
 	$Timer.start()
 	bar = [$shitBar, $shitBar2]
 	bones = 1
@@ -103,17 +104,20 @@ func die():
 func _on_timer_timeout() -> void:
 	match point:
 		0:
+			$king.play("idle")
 			$king/chat.visible = false
 			$player/chat.visible = true
 			point = 1
 			$Timer.start()
 		1:
+			$king.play("talk")
 			$king/chat.visible = true
 			$king/chat/Label.text = "Mamy pierwszego śmiałka, który zawalczy o tę magiczną książkę Dajcie mu broń i zaczynamy"
 			$player/chat.visible = false
 			point = 2
 			$Timer.start()
 		2:
+			$king.play("idle")
 			$king/chat.visible = false
 			$player/chat/Label.text = "Chyba muszę wygrać by móc wrócić do swoich czasów"
 			$player/chat.visible = true
@@ -125,6 +129,7 @@ func _on_timer_timeout() -> void:
 			startFight(0)
 		4:
 			$Timer.wait_time = 3
+			$king.play("talk")
 			$king/chat.visible = true
 			$king/chat/Label.text = "Nowy wygrał. Wprowadzić kolejnego zawodnika"
 			point = 5
@@ -132,11 +137,13 @@ func _on_timer_timeout() -> void:
 		5:
 			$Timer.stop()
 			point = null
+			$king.play("idle")
 			$king/chat.visible = false
 			$player.showButton(true)
 			startFight(1)
 		6:
 			$Timer.wait_time = 3
+			$king.play("talk")
 			$king/chat.visible = true
 			$king/chat/Label.text = "Kolejne zwycięstwo. Ciekawe czy podoła naszemu czempionowi"
 			point = 7
@@ -144,27 +151,32 @@ func _on_timer_timeout() -> void:
 		7:
 			$Timer.stop()
 			point = null
+			$king.play("idle")
 			$king/chat.visible = false
 			$player.showButton(true)
 			startFight(2)
 		8:
 			$Timer.wait_time = 3
+			$king.play("talk")
 			$king/chat.visible = true
 			$king/chat/Label.text = "Cóż za piękne zwycięstwo"
 			point = 9
 			$Timer.start()
 		9:
+			$king.play("idle")
 			$king/chat.visible = false
 			$player/chat/Label.text = "Dziękuję."
 			$player/chat.visible = true
 			point = 10
 			$Timer.start()
 		10:
+			$king.play("talk")
 			$player/chat.visible = false
 			$king/chat.visible = true
 			$king/chat/Label.text = "A oto twoja nagroda"
 			point = 11
 		11:
+			$king.play("idle")
 			$king/chat.visible = false
 			$winbutton.visible = true
 		66:

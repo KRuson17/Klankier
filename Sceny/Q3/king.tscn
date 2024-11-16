@@ -1,38 +1,57 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3jhvoe10qoy6"]
+[gd_scene load_steps=8 format=3 uid="uid://c3jhvoe10qoy6"]
 
-[ext_resource type="Texture2D" uid="uid://dhmc44u8j5uwp" path="res://asset/arena/king2.png" id="1_xna73"]
 [ext_resource type="Texture2D" uid="uid://b7s3f6g8d3ldi" path="res://asset/arena/king.png" id="2_u6xp5"]
 [ext_resource type="PackedScene" uid="uid://c2s2ubnl46htu" path="res://Sceny/Q2/chat.tscn" id="3_fytu2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0ip3"]
+atlas = ExtResource("2_u6xp5")
+region = Rect2(292, 0, 292, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v764w"]
+atlas = ExtResource("2_u6xp5")
+region = Rect2(0, 0, 292, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8w2nd"]
+atlas = ExtResource("2_u6xp5")
+region = Rect2(292, 0, 292, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_320x1"]
+atlas = ExtResource("2_u6xp5")
+region = Rect2(584, 0, 292, 423)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c3cjk"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_xna73")
+"texture": SubResource("AtlasTexture_x0ip3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v764w")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_xna73")
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_8w2nd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_u6xp5")
+"texture": SubResource("AtlasTexture_320x1")
 }],
 "loop": true,
 "name": &"talk",
-"speed": 5.0
+"speed": 2.0
 }]
 
 [node name="king" type="AnimatedSprite2D"]
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_c3cjk")
 animation = &"talk"
 
 [node name="chat" parent="." instance=ExtResource("3_fytu2")]
 position = Vector2(-9, 90)
-scale = Vector2(1, 1)
+scale = Vector2(2, 2)
 
 [node name="Label" parent="chat" index="1"]
 text = "Witam poddanych na turnieju !"

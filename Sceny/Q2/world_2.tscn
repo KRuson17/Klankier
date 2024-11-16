@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://jgku3vpkf4fo"]
+[gd_scene load_steps=9 format=3 uid="uid://jgku3vpkf4fo"]
 
 [ext_resource type="Script" path="res://script/world_2.gd" id="1_wqx20"]
 [ext_resource type="PackedScene" uid="uid://d2qg1eehnkr6" path="res://Sceny/Q1/player.tscn" id="2_dhnmb"]
-[ext_resource type="PackedScene" uid="uid://c2s2ubnl46htu" path="res://Sceny/Q1/chat.tscn" id="3_rh030"]
+[ext_resource type="PackedScene" uid="uid://c2s2ubnl46htu" path="res://Sceny/Q2/chat.tscn" id="3_rh030"]
 [ext_resource type="PackedScene" uid="uid://bndywemxnb5yy" path="res://Sceny/Q2/dino.tscn" id="4_y5wks"]
 [ext_resource type="PackedScene" uid="uid://bp6ibj62aa5lx" path="res://Sceny/Q1/ground.tscn" id="5_kyhqs"]
 [ext_resource type="Texture2D" uid="uid://dqfh1r8j78koy" path="res://asset/environment/cave.png" id="5_tv2fx"]
 [ext_resource type="PackedScene" uid="uid://oovj3wg3poci" path="res://Sceny/Q2/bone.tscn" id="6_p5ctt"]
+[ext_resource type="PackedScene" uid="uid://c8er4d5m6g8hg" path="res://Sceny/Q1/parallax_background.tscn" id="8_daym7"]
 
 [node name="world2" type="Node2D"]
 script = ExtResource("1_wqx20")
@@ -94,6 +95,8 @@ position = Vector2(4925, 588)
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 0.01
 autostart = true
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("8_daym7")]
 
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_timeout"]
 

@@ -59,13 +59,13 @@ func _on_timer_timeout() -> void:
 		2:
 			get_node("chatDino").visible = false
 			pointerToChat.get_node("Label").text = "O nie, Dinozaur. Muszę uciekać"
+			get_node("Camera2D").get_node("dino").visible = true
 			pointerToChat.visible = true
 			$Timer2.wait_time = 3
 			$Timer2.start()
 			point = 3
 		3:
 			pointerToChat.visible = false
-			get_node("Camera2D").get_node("dino").visible = true
 			$player.canMove = true
 			canMove = true
 			$Timer2.wait_time = 3
