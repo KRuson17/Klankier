@@ -1,47 +1,42 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1a251mvblg7r"]
+[gd_scene load_steps=7 format=3 uid="uid://b1a251mvblg7r"]
 
 [ext_resource type="Script" path="res://script/pterodactyl.gd" id="1_b8kk8"]
 [ext_resource type="Texture2D" uid="uid://6m0f30lu5xm6" path="res://asset/Enemy/ptero.png" id="1_xtdnb"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rk58u"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8axqt"]
 atlas = ExtResource("1_xtdnb")
-region = Rect2(0, 0, 108, 82)
+region = Rect2(0, 0, 381, 240)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hdxlp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqmac"]
 atlas = ExtResource("1_xtdnb")
-region = Rect2(108, 0, 108, 82)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v5jad"]
-atlas = ExtResource("1_xtdnb")
-region = Rect2(216, 0, 108, 82)
+region = Rect2(381, 0, 381, 240)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_entad"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rk58u")
+"texture": SubResource("AtlasTexture_8axqt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hdxlp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v5jad")
+"texture": SubResource("AtlasTexture_fqmac")
 }],
 "loop": true,
 "name": &"default",
-"speed": 3.0
+"speed": 2.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u6wk8"]
-size = Vector2(108, 82)
+size = Vector2(176, 87)
 
 [node name="pterodactyl" type="Area2D" groups=["enemy"]]
 script = ExtResource("1_b8kk8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_entad")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, 2.5)
 shape = SubResource("RectangleShape2D_u6wk8")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

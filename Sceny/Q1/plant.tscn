@@ -1,19 +1,49 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwaltwgb3ng3w"]
+[gd_scene load_steps=8 format=3 uid="uid://dwaltwgb3ng3w"]
 
 [ext_resource type="Script" path="res://script/plant.gd" id="1_d5h6i"]
 [ext_resource type="Texture2D" uid="uid://bqb0dm58yqdk2" path="res://asset/Enemy/plant.png" id="1_jn8yn"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_xv2kv"]
+atlas = ExtResource("1_jn8yn")
+region = Rect2(0, 0, 1500, 1500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjrx3"]
+atlas = ExtResource("1_jn8yn")
+region = Rect2(1500, 0, 1500, 1500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21tup"]
+atlas = ExtResource("1_jn8yn")
+region = Rect2(3000, 0, 1500, 1500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sa3do"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xv2kv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjrx3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21tup")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vw7o3"]
-size = Vector2(68, 107.5)
+size = Vector2(187, 222)
 
 [node name="plant" type="Area2D" groups=["enemy"]]
 script = ExtResource("1_d5h6i")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_jn8yn")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_sa3do")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.25)
+position = Vector2(-0.5, -1)
 shape = SubResource("RectangleShape2D_vw7o3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

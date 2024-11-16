@@ -36,7 +36,7 @@ position = Vector2(2120, 432)
 position = Vector2(2557, 481)
 
 [node name="RigidBody2D" parent="." instance=ExtResource("2_qof0f")]
-position = Vector2(658, 67)
+position = Vector2(675, 63)
 
 [node name="thorn" parent="." instance=ExtResource("3_15x6r")]
 position = Vector2(708, 298)
@@ -45,11 +45,11 @@ position = Vector2(708, 298)
 position = Vector2(598, 341)
 
 [node name="player" parent="." instance=ExtResource("5_ciuom")]
-position = Vector2(224, 249)
+position = Vector2(2028, 297)
 scale = Vector2(0.3, 0.3)
 
 [node name="plant" parent="." instance=ExtResource("6_okj8m")]
-position = Vector2(2256, 312)
+position = Vector2(2225, 271)
 
 [node name="book" parent="." instance=ExtResource("7_odjdu")]
 position = Vector2(2608, 368)
