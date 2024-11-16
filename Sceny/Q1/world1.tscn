@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bwq7nm2rjxbj6"]
+[gd_scene load_steps=14 format=3 uid="uid://bwq7nm2rjxbj6"]
 
 [ext_resource type="Script" path="res://script/world_2.gd" id="1_6nkly"]
 [ext_resource type="PackedScene" uid="uid://bp6ibj62aa5lx" path="res://Sceny/Q1/ground.tscn" id="1_g26a0"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://d2qg1eehnkr6" path="res://Sceny/Q1/player.tscn" id="5_ciuom"]
 [ext_resource type="PackedScene" uid="uid://dwaltwgb3ng3w" path="res://Sceny/Q1/plant.tscn" id="6_okj8m"]
 [ext_resource type="PackedScene" uid="uid://bpogp172tvtp1" path="res://Sceny/Q1/book.tscn" id="7_odjdu"]
+[ext_resource type="PackedScene" uid="uid://hoa6gkl4ls6p" path="res://Sceny/Q1/platform.tscn" id="7_tw0m1"]
 [ext_resource type="PackedScene" uid="uid://ceit4456yl148" path="res://Sceny/Q1/ladder.tscn" id="9_ru5l7"]
 [ext_resource type="PackedScene" uid="uid://c8er4d5m6g8hg" path="res://Sceny/Q1/parallax_background.tscn" id="10_g340g"]
 
@@ -34,7 +35,7 @@ position = Vector2(984, 691)
 position = Vector2(1362, 668)
 
 [node name="ground6" parent="ground" instance=ExtResource("1_g26a0")]
-position = Vector2(181, 690)
+position = Vector2(181, 688)
 
 [node name="ground7" parent="ground" instance=ExtResource("1_g26a0")]
 position = Vector2(7524, 543)
@@ -77,6 +78,9 @@ scale = Vector2(5.48, 5.48)
 [node name="ladder2" parent="ground" instance=ExtResource("9_ru5l7")]
 position = Vector2(1539, 286)
 scale = Vector2(5, 20)
+
+[node name="platform" parent="ground" instance=ExtResource("7_tw0m1")]
+position = Vector2(2057, 641)
 
 [node name="RigidBody2D" parent="." instance=ExtResource("2_qof0f")]
 position = Vector2(1242, 25)
