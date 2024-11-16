@@ -6,6 +6,9 @@ var canMove = false
 var pointerToPlayer
 var cameraSpeed = 1
 
+@onready var parallax_background = $ParallaxBackground
+@onready var player = $player
+
 func _init() -> void:
 	#start()
 	pass
@@ -34,6 +37,9 @@ func _process(_delta: float) -> void:
 			$Timer2.wait_time = 3
 			$Timer2.start()
 			point = 5
+		
+		var player_position = player.position.x
+		parallax_background.scroll_offset.x = player_position * 0.5
 	
 
 func moveCamera():

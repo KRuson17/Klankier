@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bwq7nm2rjxbj6"]
+[gd_scene load_steps=11 format=3 uid="uid://bwq7nm2rjxbj6"]
 
 [ext_resource type="Script" path="res://script/world_2.gd" id="1_6nkly"]
 [ext_resource type="PackedScene" uid="uid://bp6ibj62aa5lx" path="res://Sceny/Q1/ground.tscn" id="1_g26a0"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dwaltwgb3ng3w" path="res://Sceny/Q1/plant.tscn" id="6_okj8m"]
 [ext_resource type="PackedScene" uid="uid://bpogp172tvtp1" path="res://Sceny/Q1/book.tscn" id="7_odjdu"]
 [ext_resource type="PackedScene" uid="uid://ceit4456yl148" path="res://Sceny/Q1/ladder.tscn" id="9_ru5l7"]
+[ext_resource type="PackedScene" uid="uid://c8er4d5m6g8hg" path="res://Sceny/Q1/parallax_background.tscn" id="10_g340g"]
 
 [node name="World1" type="Node2D"]
 script = ExtResource("1_6nkly")
@@ -37,7 +38,7 @@ position = Vector2(2120, 432)
 position = Vector2(2557, 481)
 
 [node name="RigidBody2D" parent="." instance=ExtResource("2_qof0f")]
-position = Vector2(675, 63)
+position = Vector2(443, 47)
 
 [node name="thorn" parent="." instance=ExtResource("3_15x6r")]
 position = Vector2(703, 273)
@@ -46,7 +47,7 @@ position = Vector2(703, 273)
 position = Vector2(1003, 214)
 
 [node name="player" parent="." instance=ExtResource("5_ciuom")]
-position = Vector2(2028, 297)
+position = Vector2(2541, 311)
 scale = Vector2(0.3, 0.3)
 
 [node name="plant" parent="." instance=ExtResource("6_okj8m")]
@@ -58,3 +59,5 @@ position = Vector2(2608, 368)
 [node name="ladder" parent="." instance=ExtResource("9_ru5l7")]
 position = Vector2(1338, 281)
 scale = Vector2(5.48, 5.48)
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("10_g340g")]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8er4d5m6g8hg"]
+
+[ext_resource type="Texture2D" uid="uid://mmnu80e23fjy" path="res://asset/environment/background.png" id="1_4mntm"]
+[ext_resource type="Texture2D" uid="uid://dvpwccc8wk40m" path="res://asset/environment/test.png" id="2_fuleb"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(1957.5, 229)
+scale = Vector2(1.9475, 1)
+texture = ExtResource("1_4mntm")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1947, 503.5)
+scale = Vector2(1.37167, 2.73377)
+texture = ExtResource("2_fuleb")
