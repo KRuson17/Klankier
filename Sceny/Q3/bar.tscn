@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://biy0hhe7k4fwq"]
+
+[ext_resource type="Texture2D" uid="uid://50u2233oxtce" path="res://asset/arena/bar_under.png" id="1_skyc5"]
+[ext_resource type="Texture2D" uid="uid://un6twjw6v2f2" path="res://asset/arena/bar_progress.png" id="2_dw3aa"]
+
+[node name="shitBar" type="TextureProgressBar"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 100.0
+texture_under = ExtResource("1_skyc5")
+texture_progress = ExtResource("2_dw3aa")

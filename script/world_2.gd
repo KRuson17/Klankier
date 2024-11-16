@@ -78,4 +78,5 @@ func _on_timer_timeout() -> void:
 			$Timer2.start()
 			point = 6
 		6:
-			print("ładuj poziom 3")
+			$Timer2.stop()
+			print("ładuj poziom 3") #plus przekazanie bone

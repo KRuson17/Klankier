@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://cpr651naip60l"]
+
+[ext_resource type="Script" path="res://script/world_3.gd" id="1_djioa"]
+[ext_resource type="PackedScene" uid="uid://de81tcqsny87o" path="res://Sceny/Q3/background.tscn" id="1_y4hsy"]
+[ext_resource type="PackedScene" uid="uid://c3jhvoe10qoy6" path="res://Sceny/Q3/king.tscn" id="2_j68e7"]
+[ext_resource type="PackedScene" uid="uid://dh0p03hyova8s" path="res://Sceny/Q3/player.tscn" id="3_0f8hp"]
+[ext_resource type="PackedScene" uid="uid://6f2c2uckcvm" path="res://Sceny/Q3/enemy_on_sand.tscn" id="5_okop6"]
+[ext_resource type="PackedScene" uid="uid://biy0hhe7k4fwq" path="res://Sceny/Q3/bar.tscn" id="6_lo8wb"]
+[ext_resource type="Texture2D" uid="uid://chpwfcv58p0ea" path="res://asset/items/book.png" id="7_iysom"]
+[ext_resource type="Texture2D" uid="uid://bj00lfy0333lk" path="res://asset/items/book_hover.png" id="8_1sn6s"]
+
+[node name="world3" type="Node2D"]
+script = ExtResource("1_djioa")
+
+[node name="background" parent="." instance=ExtResource("1_y4hsy")]
+
+[node name="king" parent="." instance=ExtResource("2_j68e7")]
+position = Vector2(587, 94)
+
+[node name="player" parent="." instance=ExtResource("3_0f8hp")]
+position = Vector2(395, 588)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="enemyOnSand" parent="." instance=ExtResource("5_okop6")]
+position = Vector2(864, 570)
+
+[node name="shitBar" parent="." instance=ExtResource("6_lo8wb")]
+visible = false
+offset_left = 223.0
+offset_top = 423.0
+offset_right = 569.0
+offset_bottom = 448.0
+
+[node name="shitBar2" parent="." instance=ExtResource("6_lo8wb")]
+visible = false
+offset_left = 720.0
+offset_top = 419.0
+offset_right = 1066.0
+offset_bottom = 444.0
+
+[node name="winbutton" type="TextureButton" parent="."]
+visible = false
+offset_left = 570.0
+offset_top = 313.0
+offset_right = 657.0
+offset_bottom = 398.0
+texture_normal = ExtResource("7_iysom")
+texture_hover = ExtResource("8_1sn6s")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="winbutton" to="." method="_on_winbutton_pressed"]

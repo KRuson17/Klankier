@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3jhvoe10qoy6"]
+
+[ext_resource type="Texture2D" uid="uid://dhmc44u8j5uwp" path="res://asset/arena/king2.png" id="1_xna73"]
+[ext_resource type="Texture2D" uid="uid://b7s3f6g8d3ldi" path="res://asset/arena/king.png" id="2_u6xp5"]
+[ext_resource type="PackedScene" uid="uid://c2s2ubnl46htu" path="res://Sceny/Q2/chat.tscn" id="3_fytu2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c3cjk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xna73")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xna73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_u6xp5")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[node name="king" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_c3cjk")
+animation = &"talk"
+
+[node name="chat" parent="." instance=ExtResource("3_fytu2")]
+position = Vector2(-9, 90)
+scale = Vector2(1, 1)
+
+[node name="Label" parent="chat" index="1"]
+text = "Witam poddanych na turnieju !"
+metadata/_edit_use_anchors_ = true
+
+[editable path="chat"]

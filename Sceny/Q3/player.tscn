@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://dh0p03hyova8s"]
+
+[ext_resource type="Texture2D" uid="uid://b2vmjo1nbrupw" path="res://asset/Ludzik/ludzik.baza.png" id="1_mgp1b"]
+[ext_resource type="Texture2D" uid="uid://bnjmjukt177bg" path="res://asset/Ludzik/ludzik.eyes closed.png" id="2_bbwfn"]
+[ext_resource type="Texture2D" uid="uid://c5ye375nqoiuj" path="res://asset/Ludzik/ludzik_atack.png" id="2_x8eb5"]
+[ext_resource type="Script" path="res://script/player3.gd" id="3_1cxh0"]
+[ext_resource type="PackedScene" uid="uid://c2s2ubnl46htu" path="res://Sceny/Q2/chat.tscn" id="3_g6mmh"]
+[ext_resource type="Texture2D" uid="uid://c7d1aboet7mk" path="res://asset/Ludzik/ludzik_bone.png" id="4_owbhe"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oxjhm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x8eb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_mgp1b")
+}],
+"loop": true,
+"name": &"atack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mgp1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bbwfn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_owbhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bbwfn")
+}],
+"loop": true,
+"name": &"throw_bone",
+"speed": 2.0
+}]
+
+[node name="player" type="AnimatedSprite2D"]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_oxjhm")
+animation = &"idle"
+script = ExtResource("3_1cxh0")
+
+[node name="chat" parent="." instance=ExtResource("3_g6mmh")]
+visible = false
+position = Vector2(-3.33333, -366.667)
+
+[node name="Label" parent="chat" index="1"]
+text = "To nie jest mój czas"
+
+[editable path="chat"]

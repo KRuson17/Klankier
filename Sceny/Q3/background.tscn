@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://de81tcqsny87o"]
+
+[ext_resource type="Script" path="res://script/background_arena.gd" id="1_xdfn2"]
+[ext_resource type="Texture2D" uid="uid://b7lh0u5y4pcf0" path="res://asset/arena/back.png" id="2_ypxmi"]
+[ext_resource type="Texture2D" uid="uid://cgx3kdcfuvlar" path="res://asset/arena/people1.png" id="3_xkikp"]
+[ext_resource type="Texture2D" uid="uid://bnf3b2w3vclse" path="res://asset/arena/people2.png" id="4_swv1h"]
+[ext_resource type="Texture2D" uid="uid://cs0y6cwa2i7or" path="res://asset/arena/people3.png" id="5_t5a8n"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3si11"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xkikp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_swv1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t5a8n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="background" type="Node2D"]
+script = ExtResource("1_xdfn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("2_ypxmi")
+
+[node name="AnimatedpPeople" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 360)
+sprite_frames = SubResource("SpriteFrames_3si11")
