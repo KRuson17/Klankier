@@ -1,15 +1,10 @@
 extends Control
 
 @export var speed = 1
-var openC
-var tableVisible = []
-
-func _init() -> void:
-	if openC:
-		pass#openCredits
 
 func _ready() -> void:
 	music.play_music(preload("res://sounds/menu.wav"),"menu.tscn")
+	
 
 func _process(_delta: float) -> void:
 	$Sprite2D.rotation_degrees += speed if $Sprite2D.rotation_degrees >= 360 else speed
@@ -20,7 +15,7 @@ func _on_texture_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Sceny/Q1/world1.tscn")
 
 func _on_texture_button_2_pressed() -> void:
-	music.play_music(preload("res://sounds/music2.mp3"),"world_2.tscn")
+	music.play_music(preload("res://sounds/music2.ogg"),"world_2.tscn")
 	get_tree().change_scene_to_file("res://Sceny/Q2/world_2.tscn")
 
 func _on_texture_button_3_pressed() -> void:

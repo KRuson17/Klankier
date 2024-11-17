@@ -50,17 +50,17 @@ text = "Akime
 KRIMZY"
 
 [node name="Label3" type="Label" parent="Name"]
-offset_left = 29.0
-offset_top = 90.0
-offset_right = 69.0
-offset_bottom = 113.0
+offset_left = 29.097
+offset_top = 62.5418
+offset_right = 69.097
+offset_bottom = 85.5418
 text = "Kod:"
 
 [node name="Label4" type="Label" parent="Name"]
-offset_left = 85.0
-offset_top = 91.0
-offset_right = 146.0
-offset_bottom = 114.0
+offset_left = 85.097
+offset_top = 63.5418
+offset_right = 146.097
+offset_bottom = 86.5418
 text = "LevelKR"
 
 [node name="ButtonContainer" type="VBoxContainer" parent="."]

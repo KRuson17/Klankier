@@ -65,7 +65,7 @@ func win1():
 	call_deferred("deferred_change_scene")
 
 func deferred_change_scene():
-	music.play_music(preload("res://sounds/music2.mp3"),"world_2.tscn")
+	music.play_music(preload("res://sounds/music2.ogg"),"world_2.tscn")
 	get_tree().change_scene_to_file("res://Sceny/Q2/world_2.tscn")
 	
 func win2():

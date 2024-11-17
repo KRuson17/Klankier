@@ -46,9 +46,11 @@ func _on_timer_timeout() -> void:
 
 
 func _on_button_button_down() -> void:
-	music.play_music(preload("res://sounds/menu.wav"),"menu.tscn")
+	music.play_music(preload("res://sounds/menu.wav"), "menu.tscn")
 	var menu_scene = preload("res://Sceny/menu.tscn").instantiate()
-	menu_scene.openC = true
+	menu_scene.get_node("ButtonContainer").visible = false
+	menu_scene.get_node("Name").visible = true
+	menu_scene.get_node("Back").visible = true
 	get_tree().root.add_child(menu_scene)
 	queue_free()
 	get_tree().current_scene = menu_scene
