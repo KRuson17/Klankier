@@ -30,8 +30,8 @@ script = ExtResource("1_vp6g5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(644.5, 361)
-scale = Vector2(2.68238, 1.15692)
+position = Vector2(641.5, 363)
+scale = Vector2(1.97692, 1.4918)
 texture = ExtResource("2_i5cbx")
 
 [node name="player" type="AnimatedSprite2D" parent="."]

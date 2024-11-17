@@ -81,7 +81,7 @@ position = Vector2(1539, 286)
 scale = Vector2(5, 20)
 
 [node name="platform" parent="ground" instance=ExtResource("7_tw0m1")]
-position = Vector2(2057, 641)
+position = Vector2(2056, 654)
 
 [node name="RigidBody2D" parent="." instance=ExtResource("2_qof0f")]
 position = Vector2(1242, 25)

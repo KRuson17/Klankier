@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f26fiarvlqt0"
-path="res://.godot/imported/RAAAA.png-a115244872ad19836c75b37e15e77724.ctex"
+uid="uid://bqwomq27pc6ri"
+path="res://.godot/imported/back.png-fa078aae1980544ffee071f9fa74cf29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/dinuś/RAAAA.png"
-dest_files=["res://.godot/imported/RAAAA.png-a115244872ad19836c75b37e15e77724.ctex"]
+source_file="res://asset/robocze/back.png"
+dest_files=["res://.godot/imported/back.png-fa078aae1980544ffee071f9fa74cf29.ctex"]
 
 [params]
 
