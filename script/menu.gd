@@ -1,12 +1,15 @@
 extends Control
 
 @export var speed = 1
+var openC
 
-# Called when the node enters the scene tree for the first time.
+func _init() -> void:
+	if openC:
+		pass#openCredits
+
 func _ready() -> void:
 	music.play_music(preload("res://sounds/menu.wav"),"menu.tscn")
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	$Sprite2D.rotation_degrees += speed if $Sprite2D.rotation_degrees >= 360 else speed
