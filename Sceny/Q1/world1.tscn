@@ -90,7 +90,7 @@ position = Vector2(1242, 25)
 position = Vector2(212, 593)
 
 [node name="player" parent="." instance=ExtResource("5_ciuom")]
-position = Vector2(7632, 10)
+position = Vector2(7167, 414)
 scale = Vector2(0.3, 0.3)
 
 [node name="chat" parent="player" instance=ExtResource("11_uit0l")]
@@ -109,6 +109,9 @@ position = Vector2(7471, 381)
 position = Vector2(7629, 436)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("10_g340g")]
+
+[node name="ground2" parent="." instance=ExtResource("1_g26a0")]
+position = Vector2(7170, 564)
 
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 
