@@ -3,6 +3,7 @@ extends Node2D
 var point = 0
 
 func _ready() -> void:
+	music.play_music(preload("res://sounds/music4.ogg"),"world_4.tscn")
 	$woman/chat/Label.text = ""
 	$player/chat/Label.text = "Kolejny skok"
 	$Timer.start()
