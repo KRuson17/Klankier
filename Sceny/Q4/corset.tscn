@@ -25,63 +25,63 @@ one_shot = true
 autostart = true
 
 [node name="hole" parent="." instance=ExtResource("2_gqx15")]
-offset_left = 455.0
-offset_top = 245.0
-offset_right = 515.0
-offset_bottom = 305.0
+offset_left = 477.0
+offset_top = 285.0
+offset_right = 537.0
+offset_bottom = 345.0
 
 [node name="hole2" parent="." instance=ExtResource("2_gqx15")]
-offset_left = 478.0
-offset_top = 333.0
-offset_right = 538.0
-offset_bottom = 393.0
+offset_left = 493.0
+offset_top = 375.0
+offset_right = 553.0
+offset_bottom = 435.0
 
 [node name="hole3" parent="." instance=ExtResource("2_gqx15")]
-offset_left = 499.0
-offset_top = 424.0
-offset_right = 559.0
-offset_bottom = 484.0
+offset_left = 510.0
+offset_top = 435.0
+offset_right = 570.0
+offset_bottom = 495.0
 
 [node name="hole4" parent="." instance=ExtResource("2_gqx15")]
-offset_left = 463.0
-offset_top = 527.0
-offset_right = 523.0
-offset_bottom = 587.0
+offset_left = 530.0
+offset_top = 510.0
+offset_right = 590.0
+offset_bottom = 570.0
 
 [node name="hole5" parent="." instance=ExtResource("2_gqx15")]
-offset_left = 466.0
-offset_top = 659.0
-offset_right = 526.0
-offset_bottom = 719.0
+offset_left = 536.0
+offset_top = 580.0
+offset_right = 596.0
+offset_bottom = 640.0
 
 [node name="hole6" parent="." instance=ExtResource("2_gqx15")]
-offset_left = 769.0
-offset_top = 261.0
-offset_right = 829.0
-offset_bottom = 321.0
+offset_left = 662.0
+offset_top = 290.0
+offset_right = 722.0
+offset_bottom = 350.0
 
 [node name="hole7" parent="." instance=ExtResource("2_gqx15")]
-offset_left = 783.0
-offset_top = 344.0
-offset_right = 843.0
-offset_bottom = 404.0
+offset_left = 643.0
+offset_top = 365.0
+offset_right = 703.0
+offset_bottom = 425.0
 
 [node name="hole8" parent="." instance=ExtResource("2_gqx15")]
-offset_left = 794.0
-offset_top = 429.0
-offset_right = 854.0
-offset_bottom = 489.0
+offset_left = 633.0
+offset_top = 437.0
+offset_right = 693.0
+offset_bottom = 497.0
 
 [node name="hole9" parent="." instance=ExtResource("2_gqx15")]
-offset_left = 797.0
-offset_top = 522.0
-offset_right = 857.0
-offset_bottom = 582.0
+offset_left = 622.0
+offset_top = 511.0
+offset_right = 682.0
+offset_bottom = 571.0
 
 [node name="hole10" parent="." instance=ExtResource("2_gqx15")]
-offset_left = 793.0
-offset_top = 652.0
-offset_right = 853.0
-offset_bottom = 712.0
+offset_left = 608.0
+offset_top = 577.0
+offset_right = 668.0
+offset_bottom = 637.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

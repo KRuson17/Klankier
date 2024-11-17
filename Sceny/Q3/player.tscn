@@ -1,20 +1,22 @@
-[gd_scene load_steps=8 format=3 uid="uid://dh0p03hyova8s"]
+[gd_scene load_steps=10 format=3 uid="uid://dh0p03hyova8s"]
 
 [ext_resource type="Texture2D" uid="uid://b2vmjo1nbrupw" path="res://asset/Ludzik/ludzik.baza.png" id="1_mgp1b"]
+[ext_resource type="Texture2D" uid="uid://cubebjttb3lxn" path="res://asset/Ludzik/ludzik_atack2.png" id="1_ve45c"]
 [ext_resource type="Texture2D" uid="uid://bnjmjukt177bg" path="res://asset/Ludzik/ludzik.eyes closed.png" id="2_bbwfn"]
 [ext_resource type="Texture2D" uid="uid://c5ye375nqoiuj" path="res://asset/Ludzik/ludzik_atack.png" id="2_x8eb5"]
 [ext_resource type="Script" path="res://script/player3.gd" id="3_1cxh0"]
 [ext_resource type="PackedScene" uid="uid://c2s2ubnl46htu" path="res://Sceny/Q2/chat.tscn" id="3_g6mmh"]
 [ext_resource type="Texture2D" uid="uid://c7d1aboet7mk" path="res://asset/Ludzik/ludzik_bone.png" id="4_owbhe"]
+[ext_resource type="Texture2D" uid="uid://cw8t3fk6f5lj" path="res://asset/Ludzik/ludzik_bone2.png" id="6_5p3yj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oxjhm"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_x8eb5")
+"texture": ExtResource("1_ve45c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("1_mgp1b")
+"texture": ExtResource("2_x8eb5")
 }],
 "loop": true,
 "name": &"atack",
@@ -36,7 +38,7 @@ animations = [{
 "texture": ExtResource("4_owbhe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_bbwfn")
+"texture": ExtResource("6_5p3yj")
 }],
 "loop": true,
 "name": &"throw_bone",

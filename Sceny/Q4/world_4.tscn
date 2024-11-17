@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://wm6x40qs3cfr" path="res://asset/corset/back.jpg" id="2_i5cbx"]
 [ext_resource type="Texture2D" uid="uid://b2vmjo1nbrupw" path="res://asset/Ludzik/ludzik.baza.png" id="3_ewauo"]
 [ext_resource type="Texture2D" uid="uid://bnjmjukt177bg" path="res://asset/Ludzik/ludzik.eyes closed.png" id="4_tolwg"]
-[ext_resource type="PackedScene" uid="uid://c2s2ubnl46htu" path="res://Sceny/Q1/chat.tscn" id="5_lkk2y"]
+[ext_resource type="PackedScene" uid="uid://c2s2ubnl46htu" path="res://Sceny/Q2/chat.tscn" id="5_lkk2y"]
 [ext_resource type="PackedScene" uid="uid://u57tdje3v8fa" path="res://Sceny/Q2/portal.tscn" id="6_554h4"]
 [ext_resource type="Texture2D" uid="uid://d2516ljst2b2b" path="res://asset/corset/lady.png" id="6_hbco2"]
 [ext_resource type="PackedScene" uid="uid://cjjyaiqrr0frv" path="res://Sceny/Q4/corset.tscn" id="8_x3n54"]
@@ -64,10 +64,10 @@ visible = false
 
 [node name="winbutton" type="TextureButton" parent="."]
 visible = false
-offset_left = 525.0
-offset_top = 367.0
-offset_right = 626.0
-offset_bottom = 452.0
+offset_left = 590.0
+offset_top = 467.0
+offset_right = 691.0
+offset_bottom = 552.0
 texture_normal = ExtResource("9_njn44")
 texture_hover = ExtResource("10_5kes2")
 stretch_mode = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://jgku3vpkf4fo"]
+[gd_scene load_steps=16 format=3 uid="uid://jgku3vpkf4fo"]
 
 [ext_resource type="Script" path="res://script/world_2.gd" id="1_wqx20"]
 [ext_resource type="PackedScene" uid="uid://d2qg1eehnkr6" path="res://Sceny/Q1/player.tscn" id="2_dhnmb"]
@@ -7,14 +7,21 @@
 [ext_resource type="PackedScene" uid="uid://bp6ibj62aa5lx" path="res://Sceny/Q1/ground.tscn" id="5_kyhqs"]
 [ext_resource type="Texture2D" uid="uid://dqfh1r8j78koy" path="res://asset/environment/cave.png" id="5_tv2fx"]
 [ext_resource type="PackedScene" uid="uid://oovj3wg3poci" path="res://Sceny/Q2/bone.tscn" id="6_p5ctt"]
+[ext_resource type="Texture2D" uid="uid://bbj23is7v08di" path="res://asset/environment/trawka.png" id="7_rofuv"]
+[ext_resource type="PackedScene" uid="uid://cwhstejcvybkw" path="res://Sceny/Q1/wall.tscn" id="8_84dkv"]
 [ext_resource type="PackedScene" uid="uid://c8er4d5m6g8hg" path="res://Sceny/Q1/parallax_background.tscn" id="8_daym7"]
+[ext_resource type="PackedScene" uid="uid://ceit4456yl148" path="res://Sceny/Q1/ladder.tscn" id="9_vm53g"]
+[ext_resource type="PackedScene" uid="uid://cnarmhd0wf65y" path="res://Sceny/Q1/thorn.tscn" id="10_xwpnj"]
+[ext_resource type="PackedScene" uid="uid://b1a251mvblg7r" path="res://Sceny/Q1/pterodactyl.tscn" id="11_p3uhp"]
+[ext_resource type="PackedScene" uid="uid://hoa6gkl4ls6p" path="res://Sceny/Q1/platform.tscn" id="12_3io2i"]
+[ext_resource type="PackedScene" uid="uid://t7ndhgjyvpte" path="res://Sceny/Q1/brige.tscn" id="13_25fu1"]
 
 [node name="world2" type="Node2D"]
 script = ExtResource("1_wqx20")
 
 [node name="Cave" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(4782, 352)
+position = Vector2(7203.5, 465)
 texture = ExtResource("5_tv2fx")
 
 [node name="player" parent="." instance=ExtResource("2_dhnmb")]
@@ -31,7 +38,7 @@ text = "RRRRRAAAAAAAAWWWW"
 metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(584, 238)
+position = Vector2(584, 310.14)
 
 [node name="dino" parent="Camera2D" instance=ExtResource("4_y5wks")]
 visible = false
@@ -51,47 +58,117 @@ position = Vector2(1047, 294)
 [node name="ground4" parent="Node2D" instance=ExtResource("5_kyhqs")]
 position = Vector2(1891, 287)
 
+[node name="Sprite2D" parent="Node2D/ground4" index="0"]
+texture = ExtResource("7_rofuv")
+
 [node name="ground5" parent="Node2D" instance=ExtResource("5_kyhqs")]
 position = Vector2(2284, 329)
 
+[node name="Sprite2D" parent="Node2D/ground5" index="0"]
+texture = ExtResource("7_rofuv")
+
 [node name="ground6" parent="Node2D" instance=ExtResource("5_kyhqs")]
-position = Vector2(2217, 588)
+position = Vector2(2705, 268)
+
+[node name="Sprite2D" parent="Node2D/ground6" index="0"]
+texture = ExtResource("7_rofuv")
 
 [node name="ground7" parent="Node2D" instance=ExtResource("5_kyhqs")]
-position = Vector2(2852, 350)
+position = Vector2(3136, 331)
+
+[node name="Sprite2D" parent="Node2D/ground7" index="0"]
+texture = ExtResource("7_rofuv")
 
 [node name="ground8" parent="Node2D" instance=ExtResource("5_kyhqs")]
 position = Vector2(1894, 592)
 
 [node name="ground9" parent="Node2D" instance=ExtResource("5_kyhqs")]
-position = Vector2(2526, 597)
+position = Vector2(2355, 649)
 
 [node name="ground10" parent="Node2D" instance=ExtResource("5_kyhqs")]
-position = Vector2(2836, 595)
+position = Vector2(2841, 628)
 
 [node name="bone" parent="Node2D" instance=ExtResource("6_p5ctt")]
-position = Vector2(1816, 458)
+position = Vector2(1798, 470)
 
 [node name="bone2" parent="Node2D" instance=ExtResource("6_p5ctt")]
-position = Vector2(2569, 400)
+position = Vector2(4330, 184)
 
 [node name="ground11" parent="Node2D" instance=ExtResource("5_kyhqs")]
-position = Vector2(3158, 595)
+position = Vector2(3661, 217)
+
+[node name="Sprite2D" parent="Node2D/ground11" index="0"]
+texture = ExtResource("7_rofuv")
 
 [node name="ground12" parent="Node2D" instance=ExtResource("5_kyhqs")]
-position = Vector2(3493, 602)
+position = Vector2(3507, 653)
 
 [node name="ground13" parent="Node2D" instance=ExtResource("5_kyhqs")]
-position = Vector2(3842, 616)
+position = Vector2(4104, 241)
+
+[node name="Sprite2D" parent="Node2D/ground13" index="0"]
+texture = ExtResource("7_rofuv")
 
 [node name="ground14" parent="Node2D" instance=ExtResource("5_kyhqs")]
-position = Vector2(4198, 588)
+position = Vector2(4508, 652)
 
 [node name="ground15" parent="Node2D" instance=ExtResource("5_kyhqs")]
-position = Vector2(4576, 588)
+position = Vector2(6997.5, 701)
 
 [node name="ground16" parent="Node2D" instance=ExtResource("5_kyhqs")]
-position = Vector2(4925, 588)
+position = Vector2(7346.5, 701)
+
+[node name="wall" parent="Node2D" instance=ExtResource("8_84dkv")]
+position = Vector2(7361, 366)
+
+[node name="ladder" parent="Node2D" instance=ExtResource("9_vm53g")]
+position = Vector2(1712, 286)
+scale = Vector2(2.025, 3.205)
+
+[node name="thorn" parent="Node2D" instance=ExtResource("10_xwpnj")]
+position = Vector2(2706, 204)
+
+[node name="pterodactyl" parent="Node2D" instance=ExtResource("11_p3uhp")]
+position = Vector2(4496, 60)
+rangeToMove = [0, 50]
+
+[node name="platform" parent="Node2D" instance=ExtResource("12_3io2i")]
+position = Vector2(4043, 628)
+rangeToMove = [10, 50]
+
+[node name="ground17" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(5201, 266)
+
+[node name="Sprite2D" parent="Node2D/ground17" index="0"]
+texture = ExtResource("7_rofuv")
+
+[node name="ladder2" parent="Node2D" instance=ExtResource("9_vm53g")]
+position = Vector2(4703, 418)
+scale = Vector2(3.08, 10.985)
+
+[node name="brige" parent="Node2D" instance=ExtResource("13_25fu1")]
+position = Vector2(4909, 193)
+scale = Vector2(1.775, 1.775)
+
+[node name="ground18" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(5576, 658)
+
+[node name="thorn2" parent="Node2D" instance=ExtResource("10_xwpnj")]
+position = Vector2(2018, 238)
+
+[node name="platform2" parent="Node2D" instance=ExtResource("12_3io2i")]
+position = Vector2(6022, 673)
+rangeToMove = [0, 100]
+
+[node name="ladder3" parent="Node2D" instance=ExtResource("9_vm53g")]
+position = Vector2(6295, 418)
+scale = Vector2(3.045, 18.575)
+
+[node name="bone3" parent="Node2D" instance=ExtResource("6_p5ctt")]
+position = Vector2(6163, 54)
+
+[node name="ground19" parent="Node2D" instance=ExtResource("5_kyhqs")]
+position = Vector2(6805, 692)
 
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 0.01
@@ -99,6 +176,19 @@ autostart = true
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("8_daym7")]
 
+[node name="brige" parent="." instance=ExtResource("13_25fu1")]
+position = Vector2(3173, 595)
+
+[node name="thorn" parent="." instance=ExtResource("10_xwpnj")]
+position = Vector2(5438, 594)
+
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_timeout"]
 
 [editable path="chatDino"]
+[editable path="Node2D/ground4"]
+[editable path="Node2D/ground5"]
+[editable path="Node2D/ground6"]
+[editable path="Node2D/ground7"]
+[editable path="Node2D/ground11"]
+[editable path="Node2D/ground13"]
+[editable path="Node2D/ground17"]

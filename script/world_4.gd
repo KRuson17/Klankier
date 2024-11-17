@@ -13,16 +13,26 @@ func _process(_delta: float) -> void:
 		if $Timer.is_stopped() == false:
 			_on_timer_timeout()
 
-func startCorset():
+func startCorset(p):
 	$corset.visible = true
-	$corset.start()
+	$corset.start(p)
 
-func endCorset(q: bool):
-	if q:
+func endCorset(q: int):
+	if q == 1:
+		point = 11
 		$corset.visible = false
 		_on_timer_timeout()
-	else:
+	elif q == 2:
+		point = 5
+		$corset.visible = false
+		_on_timer_timeout()
+	elif q == -1:
+		$corset.visible = false
 		point = 65
+		_on_timer_timeout()
+	elif q == -2:
+		$corset.visible = false
+		point = 75
 		_on_timer_timeout()
 
 func _on_timer_timeout() -> void:
@@ -50,7 +60,7 @@ func _on_timer_timeout() -> void:
 			$woman/chat/Label.text = "Będziesz musiał mi pomóc"
 			$Timer.stop()
 			point = 5
-			startCorset()
+			startCorset(1)
 		5:
 			$woman/chat/Label.text = "A oto twoje notatki"
 			$woman/chat.visible = true
@@ -71,6 +81,17 @@ func _on_timer_timeout() -> void:
 			$player/portal.visible = true
 		8:
 			get_tree().change_scene_to_file("res://Sceny/epilog.tscn")
+		11:
+			$woman/chat/Label.text = "Musisz poprawić 😘"
+			$woman/chat.visible = true
+			$player/chat.visible = false
+			point = 12
+			$Timer.start()
+		12:
+			$woman/chat/Label.text = ""
+			$Timer.stop()
+			point = 5
+			startCorset(2)
 		65:
 			$woman/chat/Label.text = "Coś ci nie wyszło. Spróbuj jeszcze raz"
 			$Timer.start()
@@ -78,7 +99,15 @@ func _on_timer_timeout() -> void:
 		66:
 			$Timer.stop()
 			point = 5
-			startCorset()
+			startCorset(1)
+		75:
+			$woman/chat/Label.text = "Byłeś blisko 🤪"
+			$Timer.start()
+			point = 76
+		76:
+			$Timer.stop()
+			point = 11
+			startCorset(2)
 
 func _on_winbutton_pressed() -> void:
 	_on_timer_timeout()

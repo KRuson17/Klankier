@@ -29,7 +29,7 @@ func start():
 func _process(_delta: float) -> void:
 	if canMove:
 		moveCamera()
-		if $Camera2D.position.x > 4800:
+		if $Camera2D.position.x > 7300:
 			canMove = false
 			pointerToPlayer.win2()
 			pointerToChat.get_node("Label").text = "Uff, udało mi się uciec do bezpiecznej jaskini."
@@ -40,7 +40,9 @@ func _process(_delta: float) -> void:
 		
 		var player_position = player.position.x
 		parallax_background.scroll_offset.x = player_position * 0.5
-	
+	#if Input.is_action_pressed("ui_accept"):
+	#	if $Timer2.is_stopped() == false:
+	#		_on_timer_timeout()
 
 func moveCamera():
 	$Camera2D.position += Vector2(cameraSpeed,0)
@@ -73,9 +75,9 @@ func _on_timer_timeout() -> void:
 			point = 4
 			$Timer2.start()
 		4:
-			if cameraSpeed >= 1.75:
+			if cameraSpeed >= 1.2:
 				$Timer2.autostart = false
-			cameraSpeed += 0.25
+			cameraSpeed += 0.2
 		5:
 			$Timer2.autostart = false
 			pointerToChat.get_node("Label").text = "Teraz mogę użyć czasozmieniacza"

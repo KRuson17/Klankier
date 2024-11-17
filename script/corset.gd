@@ -4,25 +4,38 @@ extends Node2D
 @export var barTexture: Texture
 var playTable = []
 var holePNG = [preload("res://asset/corset/hole.png"), preload("res://asset/corset/hole_show.png")]
+var cor = [preload("res://asset/corset/corset-tighten.png"),preload("res://asset/corset/corset.png")]
 var target_index: int = -1
 var current_click_index: int = 0
 var bars = []
 
+var tmp = 1
+
 func _ready() -> void:
 	pass#start()
 
-func start():
+func start(m):
+	tmp = m
+	
+	# Reset playTable na pustą listę
+	playTable.clear()
+	for i in range(10):
+		remove_bar()
+	current_click_index = 0
+	if tmp == 2:
+		$Sprite2D.texture = cor[0]
 	for i in range(10):
 		playTable.append(i)
 	playTable = shuffle_alternate_random(playTable)
-
+	
 	for i in range(tableHole.size()):
 		tableHole[i].connect("pressed", Callable(self, "_on_button_pressed").bind(i))
-
-	#set_buttons_active(false)
+	
+	set_buttons_active(false)
 	showAllHole()
 	set_target_button()
 	add_bars_between_buttons()
+
 
 func shuffle_alternate_random(original_table: Array) -> Array:
 	var first_half = original_table.slice(0, original_table.size() / 2)
@@ -88,12 +101,13 @@ func _handle_wrong_button(index: int):
 	_handle_game_over()
 
 func _handle_game_over(q = false):
+	tmp += 1
 	if !q:
 		print("Gra zakończona!")
-		get_parent().endCorset(false)
+		get_parent().endCorset((tmp-1)*-1)
 	else:
 		print("Gra zakończona sukcesem")
-		get_parent().endCorset(true)
+		get_parent().endCorset(tmp-1)
 
 func add_bars_between_buttons():
 	for i in range(playTable.size() - 1):

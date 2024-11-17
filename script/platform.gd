@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-var rangeToMove = [0, 200]
+@export var rangeToMove = [0, 200]
 var direc = true
 var step = 1
 

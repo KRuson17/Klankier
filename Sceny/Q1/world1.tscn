@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://bwq7nm2rjxbj6"]
+[gd_scene load_steps=16 format=3 uid="uid://bwq7nm2rjxbj6"]
 
 [ext_resource type="Script" path="res://script/world_2.gd" id="1_6nkly"]
 [ext_resource type="PackedScene" uid="uid://bp6ibj62aa5lx" path="res://Sceny/Q1/ground.tscn" id="1_g26a0"]
 [ext_resource type="PackedScene" uid="uid://b1a251mvblg7r" path="res://Sceny/Q1/pterodactyl.tscn" id="2_qof0f"]
+[ext_resource type="Texture2D" uid="uid://bbj23is7v08di" path="res://asset/environment/trawka.png" id="3_6ck5a"]
 [ext_resource type="PackedScene" uid="uid://cnarmhd0wf65y" path="res://Sceny/Q1/thorn.tscn" id="3_15x6r"]
 [ext_resource type="PackedScene" uid="uid://t7ndhgjyvpte" path="res://Sceny/Q1/brige.tscn" id="3_boobj"]
 [ext_resource type="PackedScene" uid="uid://dh0vg37j543o0" path="res://Sceny/Q1/bucket.tscn" id="4_3b42n"]
@@ -21,13 +22,22 @@ script = ExtResource("1_6nkly")
 [node name="ground" type="Node2D" parent="."]
 
 [node name="ground" parent="ground" instance=ExtResource("1_g26a0")]
-position = Vector2(308, 386)
+position = Vector2(2509, 61)
+
+[node name="Sprite2D" parent="ground/ground" index="0"]
+texture = ExtResource("3_6ck5a")
 
 [node name="ground2" parent="ground" instance=ExtResource("1_g26a0")]
-position = Vector2(696, 428)
+position = Vector2(700, 140)
+
+[node name="Sprite2D" parent="ground/ground2" index="0"]
+texture = ExtResource("3_6ck5a")
 
 [node name="ground3" parent="ground" instance=ExtResource("1_g26a0")]
 position = Vector2(1123, 318)
+
+[node name="Sprite2D" parent="ground/ground3" index="0"]
+texture = ExtResource("3_6ck5a")
 
 [node name="ground4" parent="ground" instance=ExtResource("1_g26a0")]
 position = Vector2(984, 691)
@@ -36,64 +46,171 @@ position = Vector2(984, 691)
 position = Vector2(1362, 668)
 
 [node name="ground6" parent="ground" instance=ExtResource("1_g26a0")]
-position = Vector2(170, 690)
+position = Vector2(170, 691)
 
 [node name="ground7" parent="ground" instance=ExtResource("1_g26a0")]
 position = Vector2(7524, 543)
 
 [node name="brige" parent="ground" instance=ExtResource("3_boobj")]
-position = Vector2(608, 617)
+position = Vector2(603, 620)
 scale = Vector2(3, 1)
 
 [node name="wall" parent="ground" instance=ExtResource("4_mg11g")]
 position = Vector2(122, 234)
 
 [node name="thorn" parent="ground" instance=ExtResource("3_15x6r")]
-position = Vector2(692, 356)
+position = Vector2(1112, 621)
 
 [node name="wall2" parent="ground" instance=ExtResource("4_mg11g")]
 position = Vector2(7696, 241)
 
 [node name="ground8" parent="ground" instance=ExtResource("1_g26a0")]
-position = Vector2(1745, 14)
+position = Vector2(1533, 28)
 
 [node name="ground9" parent="ground" instance=ExtResource("1_g26a0")]
-position = Vector2(2244, 107)
+position = Vector2(2582, 718)
+
+[node name="Sprite2D" parent="ground/ground9" index="0"]
+texture = ExtResource("3_6ck5a")
 
 [node name="ground10" parent="ground" instance=ExtResource("1_g26a0")]
-position = Vector2(2680, 180)
+position = Vector2(2096, 90)
 
 [node name="ground11" parent="ground" instance=ExtResource("1_g26a0")]
-position = Vector2(3131, 250)
+position = Vector2(2924, 132)
 
 [node name="ground12" parent="ground" instance=ExtResource("1_g26a0")]
-position = Vector2(3599, 167)
+position = Vector2(4033, 713)
 
 [node name="ground13" parent="ground" instance=ExtResource("1_g26a0")]
-position = Vector2(4023, 238)
+position = Vector2(4137, 124)
 
 [node name="ladder" parent="ground" instance=ExtResource("9_ru5l7")]
-position = Vector2(910, 391)
+position = Vector2(908, 259)
 scale = Vector2(5.48, 5.48)
 
 [node name="ladder2" parent="ground" instance=ExtResource("9_ru5l7")]
-position = Vector2(1539, 286)
+position = Vector2(1327, 294)
 scale = Vector2(5, 20)
 
 [node name="platform" parent="ground" instance=ExtResource("7_tw0m1")]
-position = Vector2(2056, 654)
+position = Vector2(3277, 703)
+rangeToMove = [0, 250]
+
+[node name="ground14" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(7170, 564)
+
+[node name="Sprite2D" parent="ground/ground14" index="0"]
+texture = ExtResource("3_6ck5a")
+
+[node name="platform2" parent="ground" instance=ExtResource("7_tw0m1")]
+position = Vector2(3510, 90)
+
+[node name="ground15" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(4438, 705)
+
+[node name="Sprite2D" parent="ground/ground15" index="0"]
+texture = ExtResource("3_6ck5a")
+
+[node name="ladder3" parent="ground" instance=ExtResource("9_ru5l7")]
+position = Vector2(4327, 320)
+scale = Vector2(2.77, 15.43)
+
+[node name="brige2" parent="ground" instance=ExtResource("3_boobj")]
+position = Vector2(4696, 634)
+
+[node name="ground16" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(4954, 705)
+
+[node name="ladder4" parent="ground" instance=ExtResource("9_ru5l7")]
+position = Vector2(5100, 392)
+scale = Vector2(2.77, 15.43)
+
+[node name="ground17" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(5308, 200)
+
+[node name="ground18" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(5776, 203)
+
+[node name="Sprite2D" parent="ground/ground18" index="0"]
+texture = ExtResource("3_6ck5a")
+
+[node name="pterodactyl" parent="ground" instance=ExtResource("2_qof0f")]
+position = Vector2(5539, -67)
+rangeToMove = [0, 300]
+
+[node name="ground19" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(6283, 274)
+
+[node name="ground20" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(6849, 689)
+
+[node name="Sprite2D" parent="ground/ground20" index="0"]
+texture = ExtResource("3_6ck5a")
+
+[node name="ladder5" parent="ground" instance=ExtResource("9_ru5l7")]
+position = Vector2(6992, 573)
+scale = Vector2(2.085, 3.92)
+
+[node name="ladder6" parent="ground" instance=ExtResource("9_ru5l7")]
+position = Vector2(6039, 335)
+scale = Vector2(2.59, 8.69)
+
+[node name="ground21" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(5902, 570)
+
+[node name="platform3" parent="ground" instance=ExtResource("7_tw0m1")]
+position = Vector2(6422, 580)
+
+[node name="thorn2" parent="ground" instance=ExtResource("3_15x6r")]
+position = Vector2(4146, 53)
+
+[node name="thorn3" parent="ground" instance=ExtResource("3_15x6r")]
+position = Vector2(5774, 502)
+
+[node name="pterodactyl2" parent="ground" instance=ExtResource("2_qof0f")]
+position = Vector2(6696, 175)
+
+[node name="pterodactyl3" parent="ground" instance=ExtResource("2_qof0f")]
+position = Vector2(4718, 83)
+
+[node name="pterodactyl4" parent="ground" instance=ExtResource("2_qof0f")]
+position = Vector2(2315, 250)
+rangeToMove = [75, 175]
+
+[node name="pterodactyl5" parent="ground" instance=ExtResource("2_qof0f")]
+position = Vector2(2164, 372)
+
+[node name="pterodactyl6" parent="ground" instance=ExtResource("2_qof0f")]
+position = Vector2(2591, 328)
+rangeToMove = [50, 300]
+
+[node name="pterodactyl7" parent="ground" instance=ExtResource("2_qof0f")]
+position = Vector2(2594, 197)
+rangeToMove = [100, 200]
+
+[node name="ladder7" parent="ground" instance=ExtResource("9_ru5l7")]
+position = Vector2(3865, 677)
+
+[node name="pterodactyl8" parent="ground" instance=ExtResource("2_qof0f")]
+position = Vector2(2784, 269)
+rangeToMove = [10, 50]
+
+[node name="thorn4" parent="ground" instance=ExtResource("3_15x6r")]
+position = Vector2(5042, 633)
 
 [node name="RigidBody2D" parent="." instance=ExtResource("2_qof0f")]
-position = Vector2(1242, 25)
+position = Vector2(1450, 165)
 
 [node name="bucket" parent="." instance=ExtResource("4_3b42n")]
-position = Vector2(212, 593)
+position = Vector2(2461, 636)
 
 [node name="player" parent="." instance=ExtResource("5_ciuom")]
-position = Vector2(7167, 414)
+position = Vector2(255, 550)
 scale = Vector2(0.3, 0.3)
 
 [node name="chat" parent="player" instance=ExtResource("11_uit0l")]
+position = Vector2(0, -331.79)
 
 [node name="Label" parent="player/chat" index="1"]
 text = "To prehistoria. Muszę znaleźć notatki"
@@ -110,9 +227,14 @@ position = Vector2(7629, 436)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("10_g340g")]
 
-[node name="ground2" parent="." instance=ExtResource("1_g26a0")]
-position = Vector2(7170, 564)
-
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 
+[editable path="ground/ground"]
+[editable path="ground/ground2"]
+[editable path="ground/ground3"]
+[editable path="ground/ground9"]
+[editable path="ground/ground14"]
+[editable path="ground/ground15"]
+[editable path="ground/ground18"]
+[editable path="ground/ground20"]
 [editable path="player/chat"]
