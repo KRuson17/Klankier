@@ -22,6 +22,10 @@ func _on_texture_button_3_pressed() -> void:
 	music.play_music(preload("res://sounds/music3.mp3"),"world_3.tscn")
 	get_tree().change_scene_to_file("res://Sceny/Q3/world_3.tscn")
 
+func _on_texture_button_4_pressed() -> void:
+	music.play_music(preload("res://sounds/music4.ogg"),"world_4.tscn")
+	get_tree().change_scene_to_file("res://Sceny/Q4/world_4.tscn")
+
 func _on_button_pressed() -> void:
 	music.play_music(preload("res://sounds/prolog.ogg"),"prolog.tscn")
 	get_tree().change_scene_to_file("res://Sceny/prolog.tscn")

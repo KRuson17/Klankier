@@ -12,6 +12,8 @@ func _process(_delta: float) -> void:
 	if Input.is_action_pressed("ui_accept"):
 		if $Timer.is_stopped() == false:
 			_on_timer_timeout()
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://Sceny/menu.tscn")
 
 func startCorset(p):
 	$corset.visible = true

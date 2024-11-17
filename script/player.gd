@@ -16,6 +16,9 @@ func _ready() -> void:
 	Camera = get_node("Camera2D")
 
 func _physics_process(delta: float) -> void:
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://Sceny/menu.tscn")
+		
 	if canMove:
 		if on_ladder:
 			# Wyłącz grawitację
