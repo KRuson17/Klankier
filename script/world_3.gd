@@ -32,14 +32,14 @@ func click(button: int):
 		2:
 			if enemy == 1:
 				demage(20)
-			elif enemy == 3:
+			elif enemy == 2:
 				demage(15)
 			else:
 				demage(5)
 		3:
 			if enemy == 1:
 				demage(10)
-			elif enemy == 3:
+			elif enemy == 2:
 				demage(5)
 			else:
 				demage(20)
@@ -56,7 +56,7 @@ func enemydemage():
 	$Timer.wait_time = 1
 	point = 67
 	$Timer.start()
-	bar[0].value -= life * enemy+1
+	bar[0].value -= life * (enemy+1)
 
 func demage(life: int):
 	$player.play("atack")
@@ -112,7 +112,7 @@ func _on_timer_timeout() -> void:
 		1:
 			$king.play("talk")
 			$king/chat.visible = true
-			$king/chat/Label.text = "Mamy pierwszego śmiałka, który zawalczy o tę magiczną książkę Dajcie mu broń i zaczynamy"
+			$king/chat/Label.text = "Mamy pierwszego śmiałka, który zawalczy o tę magiczną książkę"
 			$player/chat.visible = false
 			point = 2
 			$Timer.start()
@@ -154,6 +154,7 @@ func _on_timer_timeout() -> void:
 			$king.play("idle")
 			$king/chat.visible = false
 			$player.showButton(true)
+			$enemyOnSand.scale = Vector2(0.5, 0.5)
 			startFight(2)
 		8:
 			$Timer.wait_time = 3

@@ -30,7 +30,8 @@ scale = Vector2(3, 3)
 wait_time = 3.0
 
 [node name="enemyOnSand" parent="." instance=ExtResource("5_okop6")]
-position = Vector2(864, 570)
+position = Vector2(917, 517)
+scale = Vector2(1, 1)
 
 [node name="shitBar" parent="." instance=ExtResource("6_lo8wb")]
 visible = false
@@ -41,10 +42,10 @@ offset_bottom = 448.0
 
 [node name="shitBar2" parent="." instance=ExtResource("6_lo8wb")]
 visible = false
-offset_left = 720.0
-offset_top = 419.0
-offset_right = 1066.0
-offset_bottom = 444.0
+offset_left = 721.0
+offset_top = 268.0
+offset_right = 1067.0
+offset_bottom = 293.0
 
 [node name="winbutton" type="TextureButton" parent="."]
 visible = false
