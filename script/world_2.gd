@@ -75,9 +75,9 @@ func _on_timer_timeout() -> void:
 			point = 4
 			$Timer2.start()
 		4:
-			if cameraSpeed >= 1.2:
+			if cameraSpeed >= 1:
 				$Timer2.autostart = false
-			cameraSpeed += 0.2
+			cameraSpeed += 0.15
 		5:
 			$Timer2.autostart = false
 			pointerToChat.get_node("Label").text = "Teraz mogę użyć czasozmieniacza"

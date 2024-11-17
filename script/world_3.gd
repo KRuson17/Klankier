@@ -13,6 +13,11 @@ func _ready() -> void:
 	if bones > 0:
 		$player.hasBone = true
 
+func _process(delta: float) -> void:
+	if Input.is_action_pressed("ui_accept"):
+		if $Timer.is_stopped() == false:
+			_on_timer_timeout()
+
 func startFight(_enemy):
 	point = null
 	enemy = _enemy
@@ -56,7 +61,7 @@ func enemydemage():
 	$Timer.wait_time = 1
 	point = 67
 	$Timer.start()
-	bar[0].value -= life * (enemy+1)
+	bar[0].value -= life * (enemy+1)/2
 
 func demage(life: int):
 	$player.play("atack")

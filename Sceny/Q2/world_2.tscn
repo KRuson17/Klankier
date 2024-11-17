@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://jgku3vpkf4fo"]
+[gd_scene load_steps=18 format=3 uid="uid://jgku3vpkf4fo"]
 
 [ext_resource type="Script" path="res://script/world_2.gd" id="1_wqx20"]
 [ext_resource type="PackedScene" uid="uid://d2qg1eehnkr6" path="res://Sceny/Q1/player.tscn" id="2_dhnmb"]
@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://b1a251mvblg7r" path="res://Sceny/Q1/pterodactyl.tscn" id="11_p3uhp"]
 [ext_resource type="PackedScene" uid="uid://hoa6gkl4ls6p" path="res://Sceny/Q1/platform.tscn" id="12_3io2i"]
 [ext_resource type="PackedScene" uid="uid://t7ndhgjyvpte" path="res://Sceny/Q1/brige.tscn" id="13_25fu1"]
+[ext_resource type="Texture2D" uid="uid://hrk2q44v8d4y" path="res://asset/bloki/drzewo2.png" id="14_a33qa"]
+[ext_resource type="Texture2D" uid="uid://c1gjr1m53rwbn" path="res://asset/bloki/drzewo 1.png" id="15_8smm7"]
 
 [node name="world2" type="Node2D"]
 script = ExtResource("1_wqx20")
@@ -23,10 +25,6 @@ script = ExtResource("1_wqx20")
 z_index = -2
 position = Vector2(7203.5, 465)
 texture = ExtResource("5_tv2fx")
-
-[node name="player" parent="." instance=ExtResource("2_dhnmb")]
-position = Vector2(584, 238)
-scale = Vector2(0.3, 0.3)
 
 [node name="chatDino" parent="." instance=ExtResource("3_rh030")]
 visible = false
@@ -170,6 +168,21 @@ position = Vector2(6163, 54)
 [node name="ground19" parent="Node2D" instance=ExtResource("5_kyhqs")]
 position = Vector2(6805, 692)
 
+[node name="Drzewo2" type="Sprite2D" parent="Node2D"]
+position = Vector2(3483, 429)
+scale = Vector2(11.01, 11.01)
+texture = ExtResource("14_a33qa")
+
+[node name="Drzewo1" type="Sprite2D" parent="Node2D"]
+position = Vector2(2245, 180)
+scale = Vector2(6.235, 6.235)
+texture = ExtResource("15_8smm7")
+
+[node name="Drzewo3" type="Sprite2D" parent="Node2D"]
+position = Vector2(974, 136)
+scale = Vector2(6.55, 6.55)
+texture = ExtResource("14_a33qa")
+
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 0.01
 autostart = true
@@ -181,6 +194,10 @@ position = Vector2(3173, 595)
 
 [node name="thorn" parent="." instance=ExtResource("10_xwpnj")]
 position = Vector2(5438, 594)
+
+[node name="player" parent="." instance=ExtResource("2_dhnmb")]
+position = Vector2(584, 238)
+scale = Vector2(0.3, 0.3)
 
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_timeout"]
 

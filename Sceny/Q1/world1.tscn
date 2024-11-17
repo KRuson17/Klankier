@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bwq7nm2rjxbj6"]
+[gd_scene load_steps=17 format=3 uid="uid://bwq7nm2rjxbj6"]
 
 [ext_resource type="Script" path="res://script/world_2.gd" id="1_6nkly"]
 [ext_resource type="PackedScene" uid="uid://bp6ibj62aa5lx" path="res://Sceny/Q1/ground.tscn" id="1_g26a0"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://hoa6gkl4ls6p" path="res://Sceny/Q1/platform.tscn" id="7_tw0m1"]
 [ext_resource type="PackedScene" uid="uid://ceit4456yl148" path="res://Sceny/Q1/ladder.tscn" id="9_ru5l7"]
 [ext_resource type="PackedScene" uid="uid://c8er4d5m6g8hg" path="res://Sceny/Q1/parallax_background.tscn" id="10_g340g"]
+[ext_resource type="Texture2D" uid="uid://hrk2q44v8d4y" path="res://asset/bloki/drzewo2.png" id="10_ou4y3"]
 [ext_resource type="PackedScene" uid="uid://c2s2ubnl46htu" path="res://Sceny/Q2/chat.tscn" id="11_uit0l"]
 
 [node name="World1" type="Node2D"]
@@ -169,7 +170,7 @@ position = Vector2(4146, 53)
 position = Vector2(5774, 502)
 
 [node name="pterodactyl2" parent="ground" instance=ExtResource("2_qof0f")]
-position = Vector2(6696, 175)
+position = Vector2(6794, 188)
 
 [node name="pterodactyl3" parent="ground" instance=ExtResource("2_qof0f")]
 position = Vector2(4718, 83)
@@ -198,6 +199,14 @@ rangeToMove = [10, 50]
 
 [node name="thorn4" parent="ground" instance=ExtResource("3_15x6r")]
 position = Vector2(5042, 633)
+
+[node name="ground22" parent="ground" instance=ExtResource("1_g26a0")]
+position = Vector2(5530, 569)
+
+[node name="Drzewo2" type="Sprite2D" parent="ground"]
+position = Vector2(3976, 580)
+scale = Vector2(5.185, 5.185)
+texture = ExtResource("10_ou4y3")
 
 [node name="RigidBody2D" parent="." instance=ExtResource("2_qof0f")]
 position = Vector2(1450, 165)
