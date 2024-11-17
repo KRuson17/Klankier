@@ -1,7 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpogp172tvtp1"]
+[gd_scene load_steps=7 format=3 uid="uid://bpogp172tvtp1"]
 
 [ext_resource type="Script" path="res://script/book.gd" id="1_0qahv"]
 [ext_resource type="Texture2D" uid="uid://chpwfcv58p0ea" path="res://asset/items/book.png" id="1_j4by8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7uh4"]
+atlas = ExtResource("1_j4by8")
+region = Rect2(116, 0, 116, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewys3"]
+atlas = ExtResource("1_j4by8")
+region = Rect2(0, 0, 116, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vq4im"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7uh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewys3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1xb33"]
 size = Vector2(87, 85)
@@ -9,11 +31,11 @@ size = Vector2(87, 85)
 [node name="book" type="Area2D"]
 script = ExtResource("1_0qahv")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_j4by8")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vq4im")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -0.5)
+position = Vector2(-10, 0)
 shape = SubResource("RectangleShape2D_1xb33")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

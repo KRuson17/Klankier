@@ -9,7 +9,7 @@ var current_click_index: int = 0
 var bars = []
 
 func _ready() -> void:
-	start()
+	pass#start()
 
 func start():
 	for i in range(10):
@@ -92,6 +92,7 @@ func _handle_game_over(q = false):
 		print("Gra zakończona!")
 	else:
 		print("Gra zakończona sukcesem")
+		get_parent().endCorset()
 
 func add_bars_between_buttons():
 	for i in range(playTable.size() - 1):

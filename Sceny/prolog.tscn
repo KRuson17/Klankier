@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://caklof0cjf5ho" path="res://asset/items/timeslipdevice.png" id="5_plcvq"]
 [ext_resource type="Texture2D" uid="uid://c048p3r8dk7i2" path="res://asset/prolog/szuflada_closed.png" id="7_0jyfv"]
 [ext_resource type="Texture2D" uid="uid://tvjmrcqp67vv" path="res://asset/environment/portal1.png" id="8_41xf3"]
-[ext_resource type="Texture2D" uid="uid://chpwfcv58p0ea" path="res://asset/items/book.png" id="9_4k5d3"]
+[ext_resource type="Texture2D" uid="uid://bujs7gif6dtko" path="res://asset/items/book_open.png" id="9_dhc6q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ns5f6"]
 animations = [{
@@ -69,7 +69,7 @@ texture_normal = ExtResource("7_0jyfv")
 
 [node name="Book" type="Sprite2D" parent="."]
 position = Vector2(492, 467)
-texture = ExtResource("9_4k5d3")
+texture = ExtResource("9_dhc6q")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

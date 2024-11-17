@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://6f2c2uckcvm" path="res://Sceny/Q3/enemy_on_sand.tscn" id="5_okop6"]
 [ext_resource type="PackedScene" uid="uid://u57tdje3v8fa" path="res://Sceny/Q2/portal.tscn" id="5_onrqv"]
 [ext_resource type="PackedScene" uid="uid://biy0hhe7k4fwq" path="res://Sceny/Q3/bar.tscn" id="6_lo8wb"]
-[ext_resource type="Texture2D" uid="uid://chpwfcv58p0ea" path="res://asset/items/book.png" id="7_iysom"]
 [ext_resource type="Texture2D" uid="uid://bj00lfy0333lk" path="res://asset/items/book_hover.png" id="8_1sn6s"]
+[ext_resource type="Texture2D" uid="uid://bujs7gif6dtko" path="res://asset/items/book_open.png" id="8_rm7c3"]
 
 [node name="world3" type="Node2D"]
 script = ExtResource("1_djioa")
@@ -48,12 +48,11 @@ offset_right = 1067.0
 offset_bottom = 293.0
 
 [node name="winbutton" type="TextureButton" parent="."]
-visible = false
 offset_left = 570.0
 offset_top = 313.0
 offset_right = 657.0
 offset_bottom = 398.0
-texture_normal = ExtResource("7_iysom")
+texture_normal = ExtResource("8_rm7c3")
 texture_hover = ExtResource("8_1sn6s")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

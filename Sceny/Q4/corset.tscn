@@ -1,14 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjjyaiqrr0frv"]
+[gd_scene load_steps=6 format=3 uid="uid://cjjyaiqrr0frv"]
 
 [ext_resource type="Script" path="res://script/corset.gd" id="1_8v38e"]
 [ext_resource type="Texture2D" uid="uid://4f4rwu64bsgy" path="res://asset/corset/bar.png" id="2_a2qle"]
 [ext_resource type="PackedScene" uid="uid://2uyihs2x8nsn" path="res://Sceny/Q4/hole.tscn" id="2_gqx15"]
+[ext_resource type="Texture2D" uid="uid://w3dle5lw52ho" path="res://asset/corset/pattern.jpg" id="3_kgxjo"]
 [ext_resource type="Texture2D" uid="uid://csui5n5u372rv" path="res://asset/corset/corset.png" id="3_ptnah"]
 
 [node name="corset" type="Node2D" node_paths=PackedStringArray("tableHole")]
 script = ExtResource("1_8v38e")
 tableHole = [NodePath("hole"), NodePath("hole2"), NodePath("hole3"), NodePath("hole4"), NodePath("hole5"), NodePath("hole6"), NodePath("hole7"), NodePath("hole8"), NodePath("hole9"), NodePath("hole10")]
 barTexture = ExtResource("2_a2qle")
+
+[node name="pattern" type="Sprite2D" parent="."]
+position = Vector2(640.5, 360.5)
+scale = Vector2(2.205, 1.25833)
+texture = ExtResource("3_kgxjo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(640, 360)

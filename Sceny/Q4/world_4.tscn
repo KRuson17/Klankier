@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://m2ndbchw5tw4"]
+[gd_scene load_steps=12 format=3 uid="uid://m2ndbchw5tw4"]
 
 [ext_resource type="Script" path="res://script/world_4.gd" id="1_vp6g5"]
 [ext_resource type="Texture2D" uid="uid://wm6x40qs3cfr" path="res://asset/corset/back.jpg" id="2_i5cbx"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://c2s2ubnl46htu" path="res://Sceny/Q1/chat.tscn" id="5_lkk2y"]
 [ext_resource type="PackedScene" uid="uid://u57tdje3v8fa" path="res://Sceny/Q2/portal.tscn" id="6_554h4"]
 [ext_resource type="Texture2D" uid="uid://d2516ljst2b2b" path="res://asset/corset/lady.png" id="6_hbco2"]
+[ext_resource type="PackedScene" uid="uid://cjjyaiqrr0frv" path="res://Sceny/Q4/corset.tscn" id="8_x3n54"]
+[ext_resource type="Texture2D" uid="uid://bujs7gif6dtko" path="res://asset/items/book_open.png" id="9_njn44"]
+[ext_resource type="Texture2D" uid="uid://bj00lfy0333lk" path="res://asset/items/book_hover.png" id="10_5kes2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ecnhs"]
 animations = [{
@@ -26,6 +29,7 @@ animations = [{
 script = ExtResource("1_vp6g5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2
 position = Vector2(644.5, 361)
 scale = Vector2(2.68238, 1.15692)
 texture = ExtResource("2_i5cbx")
@@ -35,20 +39,38 @@ position = Vector2(1082, 487)
 sprite_frames = SubResource("SpriteFrames_ecnhs")
 animation = &"idle"
 
+[node name="portal" parent="player" instance=ExtResource("6_554h4")]
+z_index = -1
+scale = Vector2(2, 2)
+
 [node name="chat" parent="player" instance=ExtResource("5_lkk2y")]
 position = Vector2(-171, -256)
 scale = Vector2(1, 1)
-
-[node name="portal" parent="player" instance=ExtResource("6_554h4")]
-scale = Vector2(2, 2)
 
 [node name="woman" type="Sprite2D" parent="."]
 position = Vector2(251, 385)
 texture = ExtResource("6_hbco2")
 
 [node name="chat" parent="woman" instance=ExtResource("5_lkk2y")]
+visible = false
 position = Vector2(489, -295)
 scale = Vector2(1, 1)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
+
+[node name="corset" parent="." instance=ExtResource("8_x3n54")]
+visible = false
+
+[node name="winbutton" type="TextureButton" parent="."]
+visible = false
+offset_left = 525.0
+offset_top = 367.0
+offset_right = 626.0
+offset_bottom = 452.0
+texture_normal = ExtResource("9_njn44")
+texture_hover = ExtResource("10_5kes2")
+stretch_mode = 0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="winbutton" to="." method="_on_winbutton_pressed"]

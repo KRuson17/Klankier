@@ -207,8 +207,5 @@ func _on_winbutton_pressed() -> void:
 	point = 12
 
 func win3():
-	for child in get_children():
-		child.queue_free()
-	var l = Label.new()
-	l.text = "NASTĘPNY POZIOM"
-	add_child(l)
+	music.play_music(preload("res://sounds/music4.ogg"),"world_4.tscn")
+	get_tree().change_scene_to_file("res://Sceny/Q4/world_4.tscn")
