@@ -32,14 +32,14 @@ func click(button: int):
 		2:
 			if enemy == 1:
 				demage(20)
-			elif enemy == 3:
+			elif enemy == 2:
 				demage(15)
 			else:
 				demage(5)
 		3:
 			if enemy == 1:
 				demage(10)
-			elif enemy == 3:
+			elif enemy == 2:
 				demage(5)
 			else:
 				demage(20)
@@ -56,7 +56,7 @@ func enemydemage():
 	$Timer.wait_time = 1
 	point = 67
 	$Timer.start()
-	bar[0].value -= life * enemy+1
+	bar[0].value -= life * (enemy+1)
 
 func demage(life: int):
 	$player.play("atack")
