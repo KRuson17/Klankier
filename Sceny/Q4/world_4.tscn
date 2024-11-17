@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://m2ndbchw5tw4"]
+
+[ext_resource type="Script" path="res://script/world_4.gd" id="1_vp6g5"]
+[ext_resource type="Texture2D" uid="uid://wm6x40qs3cfr" path="res://asset/corset/back.jpg" id="2_i5cbx"]
+[ext_resource type="Texture2D" uid="uid://b2vmjo1nbrupw" path="res://asset/Ludzik/ludzik.baza.png" id="3_ewauo"]
+[ext_resource type="Texture2D" uid="uid://bnjmjukt177bg" path="res://asset/Ludzik/ludzik.eyes closed.png" id="4_tolwg"]
+[ext_resource type="PackedScene" uid="uid://c2s2ubnl46htu" path="res://Sceny/Q1/chat.tscn" id="5_lkk2y"]
+[ext_resource type="PackedScene" uid="uid://u57tdje3v8fa" path="res://Sceny/Q2/portal.tscn" id="6_554h4"]
+[ext_resource type="Texture2D" uid="uid://d2516ljst2b2b" path="res://asset/corset/lady.png" id="6_hbco2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ecnhs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ewauo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tolwg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="world4" type="Node2D"]
+script = ExtResource("1_vp6g5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(644.5, 361)
+scale = Vector2(2.68238, 1.15692)
+texture = ExtResource("2_i5cbx")
+
+[node name="player" type="AnimatedSprite2D" parent="."]
+position = Vector2(1082, 487)
+sprite_frames = SubResource("SpriteFrames_ecnhs")
+animation = &"idle"
+
+[node name="chat" parent="player" instance=ExtResource("5_lkk2y")]
+position = Vector2(-171, -256)
+scale = Vector2(1, 1)
+
+[node name="portal" parent="player" instance=ExtResource("6_554h4")]
+scale = Vector2(2, 2)
+
+[node name="woman" type="Sprite2D" parent="."]
+position = Vector2(251, 385)
+texture = ExtResource("6_hbco2")
+
+[node name="chat" parent="woman" instance=ExtResource("5_lkk2y")]
+position = Vector2(489, -295)
+scale = Vector2(1, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0

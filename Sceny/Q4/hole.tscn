@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://2uyihs2x8nsn"]
+
+[ext_resource type="Texture2D" uid="uid://xlok6ajyhp5p" path="res://asset/corset/hole.png" id="1_kwl0p"]
+
+[node name="hole" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_kwl0p")
