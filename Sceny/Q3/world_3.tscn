@@ -48,6 +48,7 @@ offset_right = 1067.0
 offset_bottom = 293.0
 
 [node name="winbutton" type="TextureButton" parent="."]
+visible = false
 offset_left = 570.0
 offset_top = 313.0
 offset_right = 657.0
