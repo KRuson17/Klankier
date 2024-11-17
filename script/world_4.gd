@@ -57,7 +57,7 @@ func _on_timer_timeout() -> void:
 			$winbutton.visible = false
 			$woman/chat.visible = false
 			$player/chat.visible = true
-			$player/chat/Label.text = "Dziękuję, :hot_face:"
+			$player/chat/Label.text = "Dziękuję, 🥵"
 			point = 7
 			$Timer.start()
 		7:
