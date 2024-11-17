@@ -17,9 +17,13 @@ func startCorset():
 	$corset.visible = true
 	$corset.start()
 
-func endCorset():
-	$corset.visible = false
-	_on_timer_timeout()
+func endCorset(q: bool):
+	if q:
+		$corset.visible = false
+		_on_timer_timeout()
+	else:
+		point = 65
+		_on_timer_timeout()
 
 func _on_timer_timeout() -> void:
 	match point:
@@ -67,6 +71,14 @@ func _on_timer_timeout() -> void:
 			$player/portal.visible = true
 		8:
 			get_tree().change_scene_to_file("res://Sceny/epilog.tscn")
+		65:
+			$woman/chat/Label.text = "Coś ci nie wyszło. Spróbuj jeszcze raz"
+			$Timer.start()
+			point = 66
+		66:
+			$Timer.stop()
+			point = 5
+			startCorset()
 
 func _on_winbutton_pressed() -> void:
 	_on_timer_timeout()

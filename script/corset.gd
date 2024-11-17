@@ -90,9 +90,10 @@ func _handle_wrong_button(index: int):
 func _handle_game_over(q = false):
 	if !q:
 		print("Gra zakończona!")
+		get_parent().endCorset(false)
 	else:
 		print("Gra zakończona sukcesem")
-		get_parent().endCorset()
+		get_parent().endCorset(true)
 
 func add_bars_between_buttons():
 	for i in range(playTable.size() - 1):
