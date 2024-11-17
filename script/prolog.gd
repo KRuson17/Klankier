@@ -8,6 +8,7 @@ var notes = false
 var movePlayer = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	music.play_music(preload("res://sounds/prolog.ogg"),"prolog.tscn")
 	$szuflada.texture_normal = sz_closed
 	start()
 
@@ -30,6 +31,7 @@ func _process(_delta: float) -> void:
 	if movePlayer:
 		$AnimatedSprite2D.position = $AnimatedSprite2D.position.move_toward($portal.position, 1)
 		if $AnimatedSprite2D.position == $portal.position:
+			music.play_music(preload("res://sounds/music1.mp3"),"world1.tscn")
 			get_tree().change_scene_to_file("res://Sceny/Q1/world1.tscn")
 
 
