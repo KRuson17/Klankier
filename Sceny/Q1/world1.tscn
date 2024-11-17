@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bwq7nm2rjxbj6"]
+[gd_scene load_steps=15 format=3 uid="uid://bwq7nm2rjxbj6"]
 
 [ext_resource type="Script" path="res://script/world_2.gd" id="1_6nkly"]
 [ext_resource type="PackedScene" uid="uid://bp6ibj62aa5lx" path="res://Sceny/Q1/ground.tscn" id="1_g26a0"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://hoa6gkl4ls6p" path="res://Sceny/Q1/platform.tscn" id="7_tw0m1"]
 [ext_resource type="PackedScene" uid="uid://ceit4456yl148" path="res://Sceny/Q1/ladder.tscn" id="9_ru5l7"]
 [ext_resource type="PackedScene" uid="uid://c8er4d5m6g8hg" path="res://Sceny/Q1/parallax_background.tscn" id="10_g340g"]
+[ext_resource type="PackedScene" uid="uid://c2s2ubnl46htu" path="res://Sceny/Q1/chat.tscn" id="11_uit0l"]
 
 [node name="World1" type="Node2D"]
 script = ExtResource("1_6nkly")
@@ -89,8 +90,17 @@ position = Vector2(1242, 25)
 position = Vector2(212, 593)
 
 [node name="player" parent="." instance=ExtResource("5_ciuom")]
-position = Vector2(222, 242)
+position = Vector2(7632, 10)
 scale = Vector2(0.3, 0.3)
+
+[node name="chat" parent="player" instance=ExtResource("11_uit0l")]
+
+[node name="Label" parent="player/chat" index="1"]
+text = "To prehistoria. Muszę znaleźć notatki"
+
+[node name="Timer" type="Timer" parent="player"]
+wait_time = 3.0
+autostart = true
 
 [node name="plant" parent="." instance=ExtResource("6_okj8m")]
 position = Vector2(7471, 381)
@@ -99,3 +109,7 @@ position = Vector2(7471, 381)
 position = Vector2(7629, 436)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("10_g340g")]
+
+[connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
+
+[editable path="player/chat"]

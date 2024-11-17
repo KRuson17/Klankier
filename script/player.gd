@@ -65,6 +65,7 @@ func win1():
 	call_deferred("deferred_change_scene")
 
 func deferred_change_scene():
+	music.play_music(preload("res://sounds/music2.mp3"),"world_2.tscn")
 	get_tree().change_scene_to_file("res://Sceny/Q2/world_2.tscn")
 	
 func win2():
@@ -81,3 +82,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.is_in_group("ladder"):
 		on_ladder = false
+
+
+func _on_timer_timeout() -> void:
+	$Timer.stop()
+	$chat.visible = false
